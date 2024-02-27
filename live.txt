@@ -3,7 +3,6 @@ TVB频道,#genre#
 明珠台,http://113.119.39.121:808/hls/106/index.m3u8
 翡翠台,http://113.109.15.208:808/hls/105/index.m3u8
 香港明珠,http://113.109.15.208:808/hls/106/index.m3u8
-翡翠台,http://iptv.hiper25.com:9981/stream/channelid/14121384?ticket=817E47B023C9F57370E8A2B852DDF7995E67C06D&profile=pass
 
 广东频道,#genre#
 广东卫视,http://14.115.89.24:6868/udp/239.77.1.19:5146
