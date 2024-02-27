@@ -1,9 +1,0 @@
-
-{ 
-"lives":[
-
-{"name": "52LIVE","type": 0,"url":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/jaccong/loon/main/live.txt","epg":"https://epg.erw.cc/api/diyp/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}
-
-]
-}
-             
