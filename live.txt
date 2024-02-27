@@ -1,6 +1,7 @@
 TVB频道,#genre#
 翡翠台,https://live.hkdvb.com/hls/live/81.m3u8?token=574935376537508
-无线新聞台,https://live.hkdvb.com/hls/live/82.m3u8?token=574935376537508
+J2台,https://live.hkdvb.com/hls/live/82.m3u8?token=574935376537508
+无线新聞台,https://live.hkdvb.com/hls/live/83.m3u8?token=574935376537508
 翡翠台,http://113.119.39.121:808/hls/105/index.m3u8
 翡翠台,http://113.109.15.208:808/hls/105/index.m3u8
 
