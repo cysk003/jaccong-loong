@@ -1,4 +1,6 @@
 TVB频道,#genre#
+翡翠台,http://61.140.112.28:808/hls/105/index.m3u8
+香港明珠,http://61.140.112.28:808/hls/106/index.m3u8
 翡翠台,http://113.109.15.208:808/hls/105/index.m3u8
 香港明珠,http://113.109.15.208:808/hls/106/index.m3u8
 翡翠台,http://67.211.73.118:9901http://iptv.tvfix.org/hls/jade.m3u8
@@ -31,6 +33,9 @@ ViuTV6,http://67.211.73.118:9901http://iptv.tvfix.org/hls/viutv6.m3u8
 翡翠台,http://183.1.249.52:8081/hls/25/index.m3u8
 明珠台,http://183.1.249.52:8081/hls/26/index.m3u8
 翡翠台高清,http://183.1.249.52:8081/hls/67/index.m3u8
+翡翠台,http://183.1.251.223:8081/hls/25/index.m3u8
+明珠台,http://183.1.251.223:8081/hls/26/index.m3u8
+翡翠台高清,http://183.1.251.223:8081/hls/67/index.m3u8
 翡翠台,http://183.1.251.226:8081/hls/25/index.m3u8
 明珠台,http://183.1.251.226:8081/hls/26/index.m3u8
 翡翠台高清,http://183.1.251.226:8081/hls/67/index.m3u8
@@ -46,9 +51,3 @@ ViuTV6,http://67.211.73.118:9901http://iptv.tvfix.org/hls/viutv6.m3u8
 翡翠台,http://113.64.145.173:8081/hls/25/index.m3u8
 明珠台,http://113.64.145.173:8081/hls/26/index.m3u8
 翡翠台高清,http://113.64.145.173:8081/hls/67/index.m3u8
-翡翠台,http://113.64.145.228:8081/hls/25/index.m3u8
-明珠台,http://113.64.145.228:8081/hls/26/index.m3u8
-翡翠台高清,http://113.64.145.228:8081/hls/67/index.m3u8
-翡翠台,http://113.64.145.199:8081/hls/25/index.m3u8
-明珠台,http://113.64.145.199:8081/hls/26/index.m3u8
-翡翠台高清,http://113.64.145.199:8081/hls/67/index.m3u8
