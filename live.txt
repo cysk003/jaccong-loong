@@ -2,7 +2,6 @@ TVB频道,#genre#
 翡翠台,https://live.hkdvb.com/hls/live/81.m3u8?token=574935376517038
 J2台,https://live.hkdvb.com/hls/live/82.m3u8?token=574935376517038
 无线新聞台,https://live.hkdvb.com/hls/live/83.m3u8?token=574935376517038
-
 广东频道,#genre#
 广东卫视,http://113.68.60.121:8090/udp/239.77.1.19:5146
 广东卫视,http://113.68.60.121:8090/udp/239.77.1.152:5146
