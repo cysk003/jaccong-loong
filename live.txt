@@ -1,3 +1,6 @@
+测试频道,#genre#
+翡翠台,https://cdn-iptv.hiper25.com/TVB/video.m3u8
+大湾区卫视,https://gudou-ott.hiper25.com/live/1456.m3u8
 广东频道,#genre#
 广东卫视,http://58.63.66.6:8888/udp/239.77.1.19:5146
 广东卫视,http://58.63.66.6:8888/udp/239.77.1.152:5146
