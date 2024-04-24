@@ -74,7 +74,7 @@ urls_udp = "/udp/239.77.0.1:5146"
 unique_ips_ports = extract_unique_ip_ports(fofa_url)
 unique_ips_ports_fs = extract_unique_ip_ports(fofa_url_fs)
 unique_ips_ports_gd = extract_unique_ip_ports(fofa_url_gd)
-def findtheone(unique_ips_ports)
+def findtheone(unique_ips_ports):
     if unique_ips_ports:
     print("提取到的唯一IP地址和端口号：")
         for ip_port in unique_ips_ports:
