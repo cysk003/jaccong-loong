@@ -90,10 +90,10 @@ def findtheone(unique_ips_ports):
         if valid_ip:
             print(f"找到可访问的视频流服务: {valid_ip}")\
 
-    else:
-        print("没有找到可访问的视频流服务。")
         else:
-            print("没有提取到IP地址和端口号。")
+            print("没有找到可访问的视频流服务。")
+    else:
+        print("没有提取到IP地址和端口号。")
     return valid_ip
 valid_ip = findtheone(unique_ips_ports)
 valid_ip_fs = findtheone(unique_ips_ports_fs)
