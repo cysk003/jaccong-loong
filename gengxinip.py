@@ -57,7 +57,7 @@ def update_files(accessible_ip_port,ip_port_pattern,ip_port_repl,files_to_update
             # 替换文件中的IP地址和端口号
             # 假设文件中的IP地址和端口号格式为 http://IP:PORT
             #ip_port_pattern = r'(http://\d+\.\d+\.\d+\.\d+:\d+)'
-            updated_content = re.sub(ip_port_pattern,ip_port_repl, file_content)
+            updated_content = re.sub(ip_port_pattern, ip_port_repl, file_content)
 
             # 保存更新后的内容到新文件
             with open(file_info['filename'], 'w', encoding='utf-8') as file:
@@ -74,6 +74,7 @@ urls_udp = "/udp/239.77.0.1:5146"
 unique_ips_ports = extract_unique_ip_ports(fofa_url)
 unique_ips_ports_fs = extract_unique_ip_ports(fofa_url_fs)
 unique_ips_ports_gd = extract_unique_ip_ports(fofa_url_gd)
+
 def findtheone(unique_ips_ports):
     if unique_ips_ports:
         print("提取到的唯一IP地址和端口号：")
@@ -95,11 +96,14 @@ def findtheone(unique_ips_ports):
     else:
         print("没有提取到IP地址和端口号。")
     return valid_ip
+
 valid_ip = findtheone(unique_ips_ports)
 valid_ip_fs = findtheone(unique_ips_ports_fs)
 valid_ip_gd = findtheone(unique_ips_ports_gd)
 # 定义需要更新的文件列表
-files_to_update = [{'url': 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/jaccong/loong/main/9.txt', 'filename': '9.txt'}]
+files_to_update = [
+    {'url': 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/jaccong/loong/main/9.txt', 'filename': '9.txt'}
+]
 
 #定义正则
 ip_port_pattern = r'(\[GZ\]\,http://\d+\.\d+\.\d+\.\d+:\d+)'
