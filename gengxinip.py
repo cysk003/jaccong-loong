@@ -49,6 +49,7 @@ def check_video_stream_connectivity(ip_port, urls_udp):
 
 # 更新文件中的IP地址和端口号
 def update_files(accessible_ip_port,ip_port_pattern,ip_port_repl,files_to_update):
+    global updated_content
     for file_info in files_to_update:
         try:
             # 读取原始文件内容
@@ -122,6 +123,7 @@ ip_port_repl_fs = f'[FS],http://{valid_ip_fs}'
 ip_port_repl_gd = f'[GD],http://{valid_ip_gd}'
 
 # 更新文件中的IP地址和端口号
+updated_content = ''
 update_files(valid_ip,ip_port_pattern,ip_port_repl,files_to_update)
 update_files(valid_ip_fs,ip_port_pattern_fs,ip_port_repl_fs,files_to_update)
 update_files(valid_ip_gd,ip_port_pattern_gd,ip_port_repl_gd,files_to_update)
