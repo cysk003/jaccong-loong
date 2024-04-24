@@ -102,9 +102,9 @@ valid_ip_gd = findtheone(unique_ips_ports_gd)
 files_to_update = [{'url': 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/jaccong/loong/main/9.txt', 'filename': '9.txt'}]
 
 #定义正则
-ip_port_pattern = r'(http://\d+\.\d+\.\d+\.\d+:\d+)'
-ip_port_pattern_fs = r'(http://\d+\.\d+\.\d+\.\d+:\d+)'
-ip_port_pattern_gd = r'(http://\d+\.\d+\.\d+\.\d+:\d+)'
+ip_port_pattern = r'([GZ],http://\d+\.\d+\.\d+\.\d+:\d+)'
+ip_port_pattern_fs = r'([FS],http://\d+\.\d+\.\d+\.\d+:\d+)'
+ip_port_pattern_gd = r'([GD],http://\d+\.\d+\.\d+\.\d+:\d+)'
 # 更新文件中的IP地址和端口号
 update_files(valid_ip,ip_port_pattern,files_to_update)
 update_files(valid_ip_fs,ip_port_pattern,files_to_update)
