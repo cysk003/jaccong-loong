@@ -2,7 +2,7 @@ name: genngxinzubo
 on:
    push:
    schedule:
-    - cron: '0 */2 * * *'
+    - cron: '0 0/3 * * *'
    workflow_dispatch:
  
 jobs:
@@ -29,10 +29,10 @@ jobs:
      
       - name: Commit results
         run: |
-          git config --local user.email "chenhua.xu@qq.com"
-          git config --local user.name "wokaotianshi123"
+          git config --local user.email "jaccong@163.com"
+          git config --local user.name "jaccong"
           if [ -n "$(git status --porcelain)" ]; then
-            git add sichuanzubo.m3u sichuanzubo.txt
+            git add 9.txt
             git commit -m "Automatic update"
             git push
           else
