@@ -89,7 +89,7 @@ def findtheone(unique_ips_ports):
 
         if valid_ip:
             print(f"找到可访问的视频流服务: {valid_ip}")\
-     return None
+            
 findtheone(unique_ips_ports)
 findtheone(unique_ips_ports_fs)
 findtheone(unique_ips_ports_gd)
