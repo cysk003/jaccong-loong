@@ -72,21 +72,27 @@ urls_udp = "/udp/239.77.0.1:5146"
 
 # 提取唯一的IP地址和端口号
 unique_ips_ports = extract_unique_ip_ports(fofa_url)
-
-if unique_ips_ports:
+unique_ips_ports_fs = extract_unique_ip_ports(fofa_url_fs)
+unique_ips_ports_gd = extract_unique_ip_ports(fofa_url_gd)
+def findtheone(unique_ips_ports)
+    if unique_ips_ports:
     print("提取到的唯一IP地址和端口号：")
-    for ip_port in unique_ips_ports:
-        print(ip_port)
+        for ip_port in unique_ips_ports:
+            print(ip_port)
     
     # 测试每个IP地址和端口号，直到找到一个可访问的视频流
-    valid_ip = None
-    for ip_port in unique_ips_ports:
-        valid_ip = check_video_stream_connectivity(ip_port, urls_udp)
-        if valid_ip:
-            break  # 找到有效的IP后，不再继续循环
+        valid_ip = None
+        for ip_port in unique_ips_ports:
+            valid_ip = check_video_stream_connectivity(ip_port, urls_udp)
+            if valid_ip:
+                break  # 找到有效的IP后，不再继续循环
 
-    if valid_ip:
-        print(f"找到可访问的视频流服务: {valid_ip}")
+        if valid_ip:
+            print(f"找到可访问的视频流服务: {valid_ip}")\
+     return None
+findtheone(unique_ips_ports)
+findtheone(unique_ips_ports_fs)
+findtheone(unique_ips_ports_gd)
         # 定义需要更新的文件列表
         files_to_update = [
             {'url': 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/jaccong/loong/main/9.txt', 'filename': '9.txt'}
