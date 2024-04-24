@@ -76,7 +76,7 @@ unique_ips_ports_fs = extract_unique_ip_ports(fofa_url_fs)
 unique_ips_ports_gd = extract_unique_ip_ports(fofa_url_gd)
 def findtheone(unique_ips_ports):
     if unique_ips_ports:
-    print("提取到的唯一IP地址和端口号：")
+        print("提取到的唯一IP地址和端口号：")
         for ip_port in unique_ips_ports:
             print(ip_port)
     
