@@ -3,8 +3,9 @@ import re
 import cv2  # 导入OpenCV库
 
 # 定义fofa链接
-fofa_url = 'https://fofa.info/result?qbase64=InVkcHh5IiAmJiBjaXR5PSJHdWFuZ3pob3UiICYmIHBvcnQ9Ijg4ODgiICYmIHByb3RvY29sPSJodHRwIg%3D%3D'
-
+fofa_url = 'https://fofa.info/result?qbase64=InVkcHh5IiAmJiBwcm90b2NvbD0iaHR0cCIgJiYgY2l0eT0iR3Vhbmd6aG91IiAmJiBzZXJ2ZXI9PSJ1ZHB4eSAxLjAtMjUuMCAocHJvZCkgc3RhbmRhcmQgW0xpbnV4IDUuMTAuMTk0IHg4Nl82NF0i'
+fofa_url_gd = 'https://fofa.info/result?qbase64=InVkcHh5IiAmJiBwcm90b2NvbD0iaHR0cCIgJiYgcmVnaW9uPSJHdWFuZ2RvbmciICYmIHNlcnZlcj09InVkcHh5IDEuMC0yNS4wIChwcm9kKSBzdGFuZGFyZCBbTGludXggNS4xMC4xOTQgeDg2XzY0XSI%3D'
+fofa_url_fs = 'https://fofa.info/result?qbase64=InVkcHh5IiAmJiBwcm90b2NvbD0iaHR0cCIgJiYgY2l0eT0iRm9zaGFuIiAmJiBzZXJ2ZXI9PSJ1ZHB4eSAxLjAtMjUuMCAocHJvZCkgc3RhbmRhcmQgW0xpbnV4IDUuMTAuMTk0IHg4Nl82NF0i'
 # 尝试从fofa链接提取IP地址和端口号，并去除重复项
 def extract_unique_ip_ports(fofa_url):
     try:
