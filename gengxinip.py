@@ -59,7 +59,7 @@ def update_files(accessible_ip_port,ip_port_pattern,ip_port_repl,files_to_update
             # 假设文件中的IP地址和端口号格式为 http://IP:PORT
             #ip_port_pattern = r'(http://\d+\.\d+\.\d+\.\d+:\d+)'
             updated_content = re.sub(ip_port_pattern, ip_port_repl, file_content)
-              print(updated_content)
+            print(updated_content)
             # 保存更新后的内容到新文件
             with open(file_info['filename'], 'w', encoding='utf-8') as file:
                 file.write(updated_content)
