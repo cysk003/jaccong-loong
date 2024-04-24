@@ -12,7 +12,7 @@ def extract_unique_ip_ports(fofa_url):
         response = requests.get(fofa_url)
         html_content = response.text
         # 使用正则表达式匹配IP地址和端口号
-        middle = re.findall(r'Array.*?HTTP', html_content)
+        middle = re.findall(r'Array.*</script>', html_content)
         print(middle)
         ips_ports = re.findall(r'(\d+\.\d+\.\d+\.\d+:\d+)',middle[0])
         return ips_ports if ips_ports else None
