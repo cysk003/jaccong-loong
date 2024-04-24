@@ -53,7 +53,10 @@ def update_files(accessible_ip_port,ip_port_pattern,ip_port_repl,files_to_update
         try:
             # 读取原始文件内容
             response = requests.get(file_info['url'])
-            file_content = response.text
+            if undated_content:
+                file_content = updated_content
+            else:
+                file_content = response.text
 
             # 替换文件中的IP地址和端口号
             # 假设文件中的IP地址和端口号格式为 http://IP:PORT
