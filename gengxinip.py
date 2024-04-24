@@ -47,7 +47,7 @@ def check_video_stream_connectivity(ip_port, urls_udp):
     return None
 
 # 更新文件中的IP地址和端口号
-def update_files(accessible_ip_port,ip_port_pattern, files_to_update):
+def update_files(accessible_ip_port,ip_port_pattern,ip_port_repl,files_to_update):
     for file_info in files_to_update:
         try:
             # 读取原始文件内容
@@ -57,7 +57,7 @@ def update_files(accessible_ip_port,ip_port_pattern, files_to_update):
             # 替换文件中的IP地址和端口号
             # 假设文件中的IP地址和端口号格式为 http://IP:PORT
             #ip_port_pattern = r'(http://\d+\.\d+\.\d+\.\d+:\d+)'
-            updated_content = re.sub(ip_port_pattern, f'http://{accessible_ip_port}', file_content)
+            updated_content = re.sub(ip_port_pattern,ip_port_repl, file_content)
 
             # 保存更新后的内容到新文件
             with open(file_info['filename'], 'w', encoding='utf-8') as file:
@@ -102,11 +102,15 @@ valid_ip_gd = findtheone(unique_ips_ports_gd)
 files_to_update = [{'url': 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/jaccong/loong/main/9.txt', 'filename': '9.txt'}]
 
 #定义正则
-ip_port_pattern = r'([GZ],http://\d+\.\d+\.\d+\.\d+:\d+)'
-ip_port_pattern_fs = r'([FS],http://\d+\.\d+\.\d+\.\d+:\d+)'
-ip_port_pattern_gd = r'([GD],http://\d+\.\d+\.\d+\.\d+:\d+)'
+ip_port_pattern = r'(\[GZ\]\,http://\d+\.\d+\.\d+\.\d+:\d+)'
+ip_port_pattern_fs = r'(\[FS\]\,http://\d+\.\d+\.\d+\.\d+:\d+)'
+ip_port_pattern_gd = r'(\[GD\]\,http://\d+\.\d+\.\d+\.\d+:\d+)'
+ip_port_repl = f'[GZ],http://{accessible_ip_port}'
+ip_port_repl_fs = f'[FS],http://{accessible_ip_port}'
+ip_port_repl_gd = f'[GD],http://{accessible_ip_port}'
+
 # 更新文件中的IP地址和端口号
-update_files(valid_ip,ip_port_pattern,files_to_update)
-update_files(valid_ip_fs,ip_port_pattern,files_to_update)
-update_files(valid_ip_gd,ip_port_pattern,files_to_update)
+update_files(valid_ip,ip_port_pattern,ip_port_repl,files_to_update)
+update_files(valid_ip_fs,ip_port_pattern,ip_port_repl_fs,files_to_update)
+update_files(valid_ip_gd,ip_port_pattern,ip_port_repl_gd,files_to_update)
 
