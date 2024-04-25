@@ -67,9 +67,9 @@ def update_files(accessible_ip_port,ip_port_pattern,ip_port_repl):
         # 保存更新后的内容到新文件
         with open('9.txt', 'w', encoding='utf-8') as file:
             file.write(updated_content)
-        print(f"文件 {'9.txt'} 已更新并保存。")
+        print(f"文件9.txt已更新并保存。")
     except requests.RequestException as e:
-        print(f"无法更新文件 {'9.txt'}，错误: {e}")
+        print(f"无法更新文件9.txt，错误: {e}")
         
     try:
          # 读取原始文件内容
@@ -83,9 +83,9 @@ def update_files(accessible_ip_port,ip_port_pattern,ip_port_repl):
         # 保存更新后的内容到新文件
         with open('9.m3u', 'w', encoding='utf-8') as file:
             file.write(updated_content_3)
-        print(f"文件 '9.m3u'} 已更新并保存。")
+        print(f"文件9.m3u已更新并保存。")
     except requests.RequestException as e:
-        print(f"无法更新文件 {'9.m3u'}，错误: {e}")
+        print(f"无法更新文件9.m3u，错误: {e}")
 
 def findtheone(unique_ips_ports):
     if unique_ips_ports:
