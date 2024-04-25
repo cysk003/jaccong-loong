@@ -119,10 +119,10 @@ files_to_update = [
 ]
 
 #定义正则
-ip_port_pattern = r'(\[GZ\]\,http://\d+\.\d+\.\d+\.\d+:\d+)'
+ip_port_pattern = r'((?<=\[GZ\](\,|\n)http://)\d+\.\d+\.\d+\.\d+:\d+)'
 ip_port_pattern_fs = r'(\[FS\]\,http://\d+\.\d+\.\d+\.\d+:\d+)'
 ip_port_pattern_jm = r'(\[JM\]\,http://\d+\.\d+\.\d+\.\d+:\d+)'
-ip_port_repl = f'[GZ],http://{valid_ip}'
+ip_port_repl = valid_ip
 ip_port_repl_fs = f'[FS],http://{valid_ip_fs}'
 ip_port_repl_jm = f'[JM],http://{valid_ip_jm}'
 
