@@ -36,13 +36,13 @@ def check_video_stream_connectivity(ip_port, urls_udp):
         else:
             # 获取视频帧率
             fps = cap.get(cv2.CAP_PROP_FPS)
-            print("帧率: {:.2f}".format(fps))
             # 读取视频的宽度和高度
             width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
             height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
             print(f"视频URL {video_url} 的分辨率为 {width}x{height}")
+            print("帧率: {:.2f}".format(fps))
             # 检查分辨率是否大于0
-            if width > 0 and height > 0:
+            if width > 0 and height > 0 and fps < 45:
                 return ip_port  # 返回有效的IP和端口
             # 关闭视频流
             cap.release()
@@ -115,7 +115,8 @@ valid_ip_jm = findtheone(unique_ips_ports_jm)
 print(valid_ip_jm)
 # 定义需要更新的文件列表
 files_to_update = [
-    {'url': 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/jaccong/loong/main/9.txt', 'filename': '9.txt'}
+    {'url': 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/jaccong/loong/main/9.txt', 'filename': '9.txt'},
+    {'url': 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/jaccong/loong/main/9.m3u', 'filename': '9.txt'}
 ]
 
 #定义正则
