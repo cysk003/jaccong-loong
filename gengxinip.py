@@ -34,6 +34,9 @@ def check_video_stream_connectivity(ip_port, urls_udp):
             print(f"视频URL {video_url} 无效")
             return None
         else:
+            # 获取视频帧率
+            fps = cap.get(cv2.CAP_PROP_FPS)
+            print("帧率: {:.2f}".format(fps))
             # 读取视频的宽度和高度
             width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
             height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
