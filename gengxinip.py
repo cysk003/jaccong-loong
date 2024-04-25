@@ -5,7 +5,7 @@ import cv2  # 导入OpenCV库
 urls_udp = "/udp/239.77.0.1:5146"
 # 定义fofa链接
 fofa_url = 'https://fofa.info/result?qbase64=InVkcHh5IiAmJiBwcm90b2NvbD0iaHR0cCIgJiYgY2l0eT0iR3Vhbmd6aG91IiAmJiBzZXJ2ZXI9PSJ1ZHB4eSAxLjAtMjUuMCAocHJvZCkgc3RhbmRhcmQgW0xpbnV4IDUuMTAuMTk0IHg4Nl82NF0i'
-fofa_url_sz = 'https://fofa.info/result?qbase64=InVkcHh5IiAmJiBwcm90b2NvbD0iaHR0cCIgJiYgY2l0eT0iSmlhbmdtZW4i'
+fofa_url_jm = 'https://fofa.info/result?qbase64=InVkcHh5IiAmJiBwcm90b2NvbD0iaHR0cCIgJiYgY2l0eT0iSmlhbmdtZW4iICYmIHNlcnZlcj09InVkcHh5IDEuMC0yNS4wIChwcm9kKSBzdGFuZGFyZCBbTGludXggNS4xMC4xOTQgeDg2XzY0XSI%3D'
 fofa_url_fs = 'https://fofa.info/result?qbase64=InVkcHh5IiAmJiBwcm90b2NvbD0iaHR0cCIgJiYgY2l0eT0iRm9zaGFuIiAmJiBzZXJ2ZXI9PSJ1ZHB4eSAxLjAtMjUuMCAocHJvZCkgc3RhbmRhcmQgW0xpbnV4IDUuMTAuMTk0IHg4Nl82NF0i'
 # 尝试从fofa链接提取IP地址和端口号，并去除重复项
 def extract_unique_ip_ports(fofa_url):
@@ -100,15 +100,15 @@ unique_ips_ports = extract_unique_ip_ports(fofa_url)
 print(unique_ips_ports)
 unique_ips_ports_fs = extract_unique_ip_ports(fofa_url_fs)
 print(unique_ips_ports_fs)
-unique_ips_ports_sz = extract_unique_ip_ports(fofa_url_sz)
-print(unique_ips_ports_sz)
+unique_ips_ports_jm = extract_unique_ip_ports(fofa_url_jm)
+print(unique_ips_ports_jm)
 
 valid_ip = findtheone(unique_ips_ports)
 print(valid_ip)
 valid_ip_fs = findtheone(unique_ips_ports_fs)
 print(valid_ip_fs)
-valid_ip_sz = findtheone(unique_ips_ports_sz)
-print(valid_ip_sz)
+valid_ip_jm = findtheone(unique_ips_ports_jm)
+print(valid_ip_jm)
 # 定义需要更新的文件列表
 files_to_update = [
     {'url': 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/jaccong/loong/main/9.txt', 'filename': '9.txt'}
@@ -117,14 +117,14 @@ files_to_update = [
 #定义正则
 ip_port_pattern = r'(\[GZ\]\,http://\d+\.\d+\.\d+\.\d+:\d+)'
 ip_port_pattern_fs = r'(\[FS\]\,http://\d+\.\d+\.\d+\.\d+:\d+)'
-ip_port_pattern_sz = r'(\[SZ\]\,http://\d+\.\d+\.\d+\.\d+:\d+)'
+ip_port_pattern_jm = r'(\[JM\]\,http://\d+\.\d+\.\d+\.\d+:\d+)'
 ip_port_repl = f'[GZ],http://{valid_ip}'
 ip_port_repl_fs = f'[FS],http://{valid_ip_fs}'
-ip_port_repl_sz = f'[SZ],http://{valid_ip_sz}'
+ip_port_repl_jm = f'[JM],http://{valid_ip_jm}'
 
 # 更新文件中的IP地址和端口号
 updated_content = ''
 update_files(valid_ip,ip_port_pattern,ip_port_repl,files_to_update)
 update_files(valid_ip_fs,ip_port_pattern_fs,ip_port_repl_fs,files_to_update)
-update_files(valid_ip_sz,ip_port_pattern_sz,ip_port_repl_sz,files_to_update)
+update_files(valid_ip_jm,ip_port_pattern_jm,ip_port_repl_jm,files_to_update)
 
