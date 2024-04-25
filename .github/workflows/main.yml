@@ -1,6 +1,8 @@
 name: genngxinzubo
 on:
    push:
+     paths:
+      - '**.py'
    schedule:
         - cron: '0 */2 * * *'
    workflow_dispatch:
