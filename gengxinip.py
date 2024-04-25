@@ -37,7 +37,8 @@ def check_video_stream_connectivity(ip_port, urls_udp):
             # 读取视频的宽度和高度
             width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
             height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-            print(f"视频URL {video_url} 的分辨率为 {width}x{height}")
+            fps = int(cap.get(cv2.CV_CAP_PROP_FPS ))
+            print(f"视频URL {video_url} 的分辨率为 {width}x{height}，帧率为{fps}")
             # 检查分辨率是否大于0
             if width > 0 and height > 0:
                 return ip_port  # 返回有效的IP和端口
