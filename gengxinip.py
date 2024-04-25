@@ -1,7 +1,7 @@
 import requests
 import re
 import cv2  # 导入OpenCV库
-# 定义组播地址和端口
+# 定义组播地址和端口 
 urls_udp = "/udp/239.77.0.1:5146"
 # 定义fofa链接
 fofa_url = 'https://fofa.info/result?qbase64=InVkcHh5IiAmJiBwcm90b2NvbD0iaHR0cCIgJiYgY2l0eT0iR3Vhbmd6aG91IiAmJiBzZXJ2ZXI9PSJ1ZHB4eSAxLjAtMjUuMCAocHJvZCkgc3RhbmRhcmQgW0xpbnV4IDUuMTAuMTk0IHg4Nl82NF0i'
