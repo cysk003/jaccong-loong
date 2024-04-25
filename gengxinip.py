@@ -140,6 +140,7 @@ ip_port_repl_jm = valid_ip_jm
 
 # 更新文件中的IP地址和端口号
 updated_content = ''
+updated_content_3 = ''
 update_files(valid_ip,ip_port_pattern,ip_port_repl)
 update_files(valid_ip_fs,ip_port_pattern_fs,ip_port_repl_fs)
 update_files(valid_ip_jm,ip_port_pattern_jm,ip_port_repl_jm)
