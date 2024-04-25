@@ -51,29 +51,41 @@ def check_video_stream_connectivity(ip_port, urls_udp):
     return None
 
 # 更新文件中的IP地址和端口号
-def update_files(accessible_ip_port,ip_port_pattern,ip_port_repl,files_to_update):
+def update_files(accessible_ip_port,ip_port_pattern,ip_port_repl):
     global updated_content
-    for file_info in files_to_update:
-        try:
-            # 读取原始文件内容
-            response = requests.get(file_info['url'])
-            if updated_content:
-                file_content = updated_content
-            else:
-                file_content = response.text
-
-            # 替换文件中的IP地址和端口号
-            # 假设文件中的IP地址和端口号格式为 http://IP:PORT
-            #ip_port_pattern = r'(http://\d+\.\d+\.\d+\.\d+:\d+)'
-            updated_content = re.sub(ip_port_pattern, ip_port_repl, file_content)
-            print(updated_content)
-            # 保存更新后的内容到新文件
-            with open(file_info['filename'], 'w', encoding='utf-8') as file:
-                file.write(updated_content)
-
-            print(f"文件 {file_info['filename']} 已更新并保存。")
-        except requests.RequestException as e:
-            print(f"无法更新文件 {file_info['filename']}，错误: {e}")
+    global updated_content_3
+    #for file_info in files_to_update:
+    try:
+         # 读取原始文件内容
+        response = requests.get('https://mirror.ghproxy.com/https://raw.githubusercontent.com/jaccong/loong/main/9.txt')
+        if updated_content:
+            file_content = updated_content
+        else:
+            file_content = response.text
+        # 替换文件中的IP地址和端口号
+        updated_content = re.sub(ip_port_pattern, ip_port_repl, file_content)
+        # 保存更新后的内容到新文件
+        with open('9.txt', 'w', encoding='utf-8') as file:
+            file.write(updated_content)
+        print(f"文件 {'9.txt'} 已更新并保存。")
+    except requests.RequestException as e:
+        print(f"无法更新文件 {'9.txt'}，错误: {e}")
+        
+    try:
+         # 读取原始文件内容
+        response = requests.get('https://mirror.ghproxy.com/https://raw.githubusercontent.com/jaccong/loong/main/9.m3u')
+        if updated_content_3:
+            file_content = updated_content_3
+        else:
+            file_content = response.text
+        # 替换文件中的IP地址和端口号
+        updated_content_3 = re.sub(ip_port_pattern, ip_port_repl, file_content)
+        # 保存更新后的内容到新文件
+        with open('9.m3u', 'w', encoding='utf-8') as file:
+            file.write(updated_content_3)
+        print(f"文件 '9.m3u'} 已更新并保存。")
+    except requests.RequestException as e:
+        print(f"无法更新文件 {'9.m3u'}，错误: {e}")
 
 def findtheone(unique_ips_ports):
     if unique_ips_ports:
@@ -120,15 +132,15 @@ files_to_update = [
 
 #定义正则
 ip_port_pattern = r'((?<=\[GZ\](\,|\n)http://)\d+\.\d+\.\d+\.\d+:\d+)'
-ip_port_pattern_fs = r'(\[FS\]\,http://\d+\.\d+\.\d+\.\d+:\d+)'
-ip_port_pattern_jm = r'(\[JM\]\,http://\d+\.\d+\.\d+\.\d+:\d+)'
+ip_port_pattern_fs = r'((?<=\[FS\](\,|\n)http://)\d+\.\d+\.\d+\.\d+:\d+)'
+ip_port_pattern_jm = r'((?<=\[JM\](\,|\n)http://)\d+\.\d+\.\d+\.\d+:\d+)'
 ip_port_repl = valid_ip
-ip_port_repl_fs = f'[FS],http://{valid_ip_fs}'
-ip_port_repl_jm = f'[JM],http://{valid_ip_jm}'
+ip_port_repl_fs = valid_ip_fs
+ip_port_repl_jm = valid_ip_jm
 
 # 更新文件中的IP地址和端口号
 updated_content = ''
-update_files(valid_ip,ip_port_pattern,ip_port_repl,files_to_update)
-update_files(valid_ip_fs,ip_port_pattern_fs,ip_port_repl_fs,files_to_update)
-update_files(valid_ip_jm,ip_port_pattern_jm,ip_port_repl_jm,files_to_update)
+update_files(valid_ip,ip_port_pattern,ip_port_repl)
+update_files(valid_ip_fs,ip_port_pattern_fs,ip_port_repl_fs)
+update_files(valid_ip_jm,ip_port_pattern_jm,ip_port_repl_jm)
 
