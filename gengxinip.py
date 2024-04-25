@@ -115,8 +115,7 @@ valid_ip_jm = findtheone(unique_ips_ports_jm)
 print(valid_ip_jm)
 # 定义需要更新的文件列表
 files_to_update = [
-    {'url': 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/jaccong/loong/main/9.txt', 'filename': '9.txt'},
-    {'url': 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/jaccong/loong/main/9.m3u', 'filename': '9.m3u'}
+    {'url': 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/jaccong/loong/main/9.txt', 'filename': '9.txt'}
 ]
 
 #定义正则
