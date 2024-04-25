@@ -5,7 +5,7 @@ import cv2  # 导入OpenCV库
 urls_udp = "/udp/239.77.0.1:5146"
 # 定义fofa链接
 fofa_url = 'https://fofa.info/result?qbase64=InVkcHh5IiAmJiBwcm90b2NvbD0iaHR0cCIgJiYgY2l0eT0iR3Vhbmd6aG91IiAmJiBzZXJ2ZXI9PSJ1ZHB4eSAxLjAtMjUuMCAocHJvZCkgc3RhbmRhcmQgW0xpbnV4IDUuMTAuMTk0IHg4Nl82NF0i'
-fofa_url_sz = 'https://fofa.info/result?qbase64=InVkcHh5IiAmJiBwcm90b2NvbD0iaHR0cCIgJiYgc2VydmVyPT0idWRweHkgMS4wLTI1LjAgKHByb2QpIHN0YW5kYXJkIFtMaW51eCA1LjEwLjE5NCB4ODZfNjRdIiAmJiBjaXR5PSJTaGVuemhlbiI%3D'
+fofa_url_sz = 'https://fofa.info/result?qbase64=InVkcHh5IiAmJiBwcm90b2NvbD0iaHR0cCImJiBjaXR5PSJTaGVuemhlbiI%3D'
 fofa_url_fs = 'https://fofa.info/result?qbase64=InVkcHh5IiAmJiBwcm90b2NvbD0iaHR0cCIgJiYgY2l0eT0iRm9zaGFuIiAmJiBzZXJ2ZXI9PSJ1ZHB4eSAxLjAtMjUuMCAocHJvZCkgc3RhbmRhcmQgW0xpbnV4IDUuMTAuMTk0IHg4Nl82NF0i'
 # 尝试从fofa链接提取IP地址和端口号，并去除重复项
 def extract_unique_ip_ports(fofa_url):
@@ -79,7 +79,7 @@ def findtheone(unique_ips_ports):
             print(ip_port)
     
     # 测试每个IP地址和端口号，直到找到一个可访问的视频流
-        valid_ip = None
+        valid_ip = '88.88.88.88:8888'
         for ip_port in unique_ips_ports:
             valid_ip = check_video_stream_connectivity(ip_port, urls_udp)
             if valid_ip:
