@@ -1,4 +1,4 @@
-#EXTM3U x-tvg-url="https://epg.erw.cc/e.xml"
+#EXTM3U x-tvg-url="http://epg.51zmt.top:8000/e.xml"
 #EXTINF:-1 tvg-name="广东珠江" tvg-logo="https://live.fanmingming.com/tv/广东珠江.png" group-title="广东频道[GZ]",广东珠江[GZ]
 http://116.23.137.109:4000/udp/239.77.0.1:5146
 #EXTINF:-1 tvg-name="广东体育" tvg-logo="https://live.fanmingming.com/tv/广东体育.png" group-title="广东频道[GZ]",广东体育[GZ]
