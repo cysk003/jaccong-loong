@@ -1,9 +1,9 @@
-name: itvlist
+name: tvtest
 
 on:
    push:
      paths:
-      - 'test.py'
+      - 'tvtest.py'
 
 jobs:
   build:
