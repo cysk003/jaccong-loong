@@ -317,7 +317,7 @@ with open("test.txt", 'w', encoding='utf-8') as file:
 
 with open("test.m3u", 'w', encoding='utf-8') as file:
     channel_counters = {}
-    file.write('#EXTM3U\n')
+    file.write('#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml"\n')
     for result in results:
         channel_name, channel_url, speed = result
         if 'CCTV' in channel_name:
@@ -325,11 +325,11 @@ with open("test.m3u", 'w', encoding='utf-8') as file:
                 if channel_counters[channel_name] >= result_counter:
                     continue
                 else:
-                    file.write(f"#EXTINF:-1 group-title=\"央视频道\",{channel_name}\n")
+                    file.write(f"#EXTINF:-1 tvg-name={channel_name} tvg-logo=\"https:\/\/live.fanmingming.com/tv/{channel_name}.png\" group-title=\"央视频道\",{channel_name}\n")
                     file.write(f"{channel_url}\n")
                     channel_counters[channel_name] += 1
             else:
-                file.write(f"#EXTINF:-1 group-title=\"央视频道\",{channel_name}\n")
+                file.write(f"#EXTINF:-1 tvg-name={channel_name} tvg-logo=\"https:\/\/live.fanmingming.com/tv/{channel_name}.png\" group-title=\"央视频道\",{channel_name}\n")
                 file.write(f"{channel_url}\n")
                 channel_counters[channel_name] = 1
     channel_counters = {}
@@ -341,11 +341,11 @@ with open("test.m3u", 'w', encoding='utf-8') as file:
                 if channel_counters[channel_name] >= result_counter:
                     continue
                 else:
-                    file.write(f"#EXTINF:-1 group-title=\"卫视频道\",{channel_name}\n")
+                    file.write(f"#EXTINF:-1 tvg-name={channel_name} tvg-logo=\"https:\/\/live.fanmingming.com/tv/{channel_name}.png\" group-title=\"卫视频道\",{channel_name}\n")
                     file.write(f"{channel_url}\n")
                     channel_counters[channel_name] += 1
             else:
-                file.write(f"#EXTINF:-1 group-title=\"卫视频道\",{channel_name}\n")
+                file.write(f"#EXTINF:-1 tvg-name={channel_name} tvg-logo=\"https:\/\/live.fanmingming.com/tv/{channel_name}.png\" group-title=\"卫视频道\",{channel_name}\n")
                 file.write(f"{channel_url}\n")
                 channel_counters[channel_name] = 1
     channel_counters = {}
@@ -357,10 +357,10 @@ with open("test.m3u", 'w', encoding='utf-8') as file:
                 if channel_counters[channel_name] >= result_counter:
                     continue
                 else:
-                    file.write(f"#EXTINF:-1 group-title=\"其他频道\",{channel_name}\n")
+                    file.write(f"#EXTINF:-1 tvg-name={channel_name} tvg-logo=\"https:\/\/live.fanmingming.com/tv/{channel_name}.png\" group-title=\"其他频道\",{channel_name}\n")
                     file.write(f"{channel_url}\n")
                     channel_counters[channel_name] += 1
             else:
-                file.write(f"#EXTINF:-1 group-title=\"其他频道\",{channel_name}\n")
+                file.write(f"#EXTINF:-1 tvg-name={channel_name} tvg-logo=\"https:\/\/live.fanmingming.com/tv/{channel_name}.png\" group-title=\"其他频道\",{channel_name}\n")
                 file.write(f"{channel_url}\n")
                 channel_counters[channel_name] = 1
