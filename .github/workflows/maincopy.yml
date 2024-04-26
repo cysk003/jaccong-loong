@@ -22,7 +22,7 @@ jobs:
         run: pip install selenium requests futures eventlet
 
       - name: Run test
-        run: python ${{ github.workspace }}/test.py
+        run: python ${{ github.workspace }}/tvtest.py
 
       #- name: Run cctv
         #run: python ${{ github.workspace }}/cctv.py
