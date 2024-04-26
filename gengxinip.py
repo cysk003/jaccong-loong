@@ -67,9 +67,9 @@ def update_files(accessible_ip_port,ip_port_pattern,ip_port_repl):
         updated_content = re.sub(ip_port_pattern, ip_port_repl, file_content)
         #失效标记
         if ip_port_repl == '88.88.88.88:8888':
-            updated_content = re.sub(group,f'{group}失效', updated_content)
+            updated_content = re.sub(f'\[{group}(失效|)\]',f'[{group}失效]', updated_content)
         else:
-            updated_content = re.sub(f'{group}失效',group, updated_content)
+            updated_content = re.sub(f'\[{group}(失效|)\]',f'[{group}]', updated_content)
         # 保存更新后的内容到新文件
         with open('9.txt', 'w', encoding='utf-8') as file:
             file.write(updated_content)
