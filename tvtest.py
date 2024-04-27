@@ -9,7 +9,8 @@ import threading
 from queue import Queue
 import eventlet
 eventlet.monkey_patch()
-
+hour = int(time.strftime('%H'))+8
+now = time.strftime(f'[%m/%d {hour}:%M]Updated.')
 urls = [
     "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iZ3Vhbmdkb25nIg%3D%3D" # Guangdong (广东)
     ]
@@ -312,7 +313,8 @@ with open("test.txt", 'w', encoding='utf-8') as file:
             else:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
-
+    file.write(f'{now},#genre#\n')
+    file.write("Auto-update,http:// \n")
 with open("test.m3u", 'w', encoding='utf-8') as file:
     channel_counters = {}
     file.write('#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml"\n')
@@ -362,3 +364,5 @@ with open("test.m3u", 'w', encoding='utf-8') as file:
                 file.write(f"#EXTINF:-1 tvg-name={channel_name} tvg-logo=\"https://live.fanmingming.com/tv/{channel_name}.png\" group-title=\"其他频道\",{channel_name}\n")
                 file.write(f"{channel_url}\n")
                 channel_counters[channel_name] = 1
+    file.write(f"#EXTINF:-1 tvg-name=\"\" tvg-logo=\"\" group-title=\"{now}\",Auto-update\n")
+    file.write("http:// \n")
