@@ -1,4 +1,5 @@
 import time
+import datetime
 import concurrent.futures
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -9,8 +10,7 @@ import threading
 from queue import Queue
 import eventlet
 eventlet.monkey_patch()
-hour = int(time.strftime('%H'))+8
-now = time.strftime(f'[%m/%d {hour}:%M]Updated.')
+now = (datetime.datetime.now() + datetime.timedelta(hours=8)).strftime('[%m/%d %H:%M]Updated.')
 urls = [
     "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iZ3Vhbmdkb25nIg%3D%3D" # Guangdong (广东)
     ]
