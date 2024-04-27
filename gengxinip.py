@@ -14,7 +14,7 @@ def extract_unique_ip_ports(fofa_url):
         html_content = response.text
         # 使用正则表达式匹配IP地址和端口号
         middle = re.findall(r'Array.*</script>', html_content)
-        print(middle)
+        
         ips_ports = re.findall(r'(\d+\.\d+\.\d+\.\d+:\d+)',middle[0])
         return ips_ports if ips_ports else None
     except requests.RequestException as e:
@@ -30,7 +30,7 @@ def check_video_stream_connectivity(ip_port, urls_udp):
         cap = cv2.VideoCapture(video_url)
         cap2 = cv2.VideoCapture(f"http://{ip_port}/udp/239.77.0.112:5146")
         # 检查视频是否成功打开
-        if not cap.isOpened() or cap2.isOpened():
+        if not cap.isOpened():
             print(f"视频URL：{video_url} 无效")
             return None
         else:
