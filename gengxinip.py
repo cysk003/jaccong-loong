@@ -28,7 +28,7 @@ def check_video_stream_connectivity(ip_port, urls_udp):
         video_url = f"http://{ip_port}{urls_udp}"
         # 用OpenCV读取视频
         cap = cv2.VideoCapture(video_url)
-        
+        cap2 = cv2.VideoCapture(f"http://{ip_port}/udp/239.77.0.112:5146")
         # 检查视频是否成功打开
         if not cap.isOpened():
             print(f"视频URL {video_url} 无效")
@@ -36,13 +36,13 @@ def check_video_stream_connectivity(ip_port, urls_udp):
         else:
             # 获取视频帧率
             fps = cap.get(cv2.CAP_PROP_FPS)
+            fps2 = cap2.get(cv2.CAP_PROP_FPS)
             # 读取视频的宽度和高度
             width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
             height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-            print(f"视频URL {video_url} 的分辨率为 {width}x{height}")
-            print("帧率: {:.2f}".format(fps))
+            print(f"视频URL：{video_url} 的分辨率为 {width}x{height}","[广东珠江]帧率: {:.2f}".format(fps),"[广东体育]帧率: {:.2f}".format(fps2))
             # 检查分辨率是否大于0
-            if width > 0 and height > 0 and fps < 45:
+            if width > 0 and height > 0 and fps < 40 and fps2 < 40:
                 return ip_port  # 返回有效的IP和端口
             # 关闭视频流
             cap.release()
@@ -73,7 +73,7 @@ def update_files(accessible_ip_port,ip_port_pattern,ip_port_repl):
         # 保存更新后的内容到新文件
         with open('9.txt', 'w', encoding='utf-8') as file:
             file.write(updated_content)
-        print(f"文件9.txt已更新并保存。")
+        print(f"{group}：文件9.txt已更新并保存。")
     except requests.RequestException as e:
         print(f"无法更新文件9.txt，错误: {e}")
         
@@ -86,10 +86,15 @@ def update_files(accessible_ip_port,ip_port_pattern,ip_port_repl):
             file_content = response.text
         # 替换文件中的IP地址和端口号
         updated_content_3 = re.sub(ip_port_pattern, ip_port_repl, file_content)
+        #失效标记
+        if ip_port_repl == '88.88.88.88:8888':
+            updated_content_3 = re.sub(f'频道.?{group}(失效|)',f'频道[{group}失效', updated_content_3)
+        else:
+            updated_content_3 = re.sub(f'频道.?{group}(失效|)',f'频道[{group}', updated_content_3)
         # 保存更新后的内容到新文件
         with open('9.m3u', 'w', encoding='utf-8') as file:
             file.write(updated_content_3)
-        print(f"文件9.m3u已更新并保存。")
+        print(f"{group}：文件9.m3u已更新并保存。")
     except requests.RequestException as e:
         print(f"无法更新文件9.m3u，错误: {e}")
 
