@@ -1,6 +1,9 @@
 import requests
 import re
 import cv2  # 导入OpenCV库
+import time
+#取时间
+now = time.strftime('[%m/%d %H:%M]Updated.')
 # 定义组播地址和端口 
 urls_udp = "/udp/239.77.0.1:5146"
 # 定义fofa链接
@@ -65,6 +68,7 @@ def update_files(accessible_ip_port,ip_port_pattern,ip_port_repl):
             file_content = response.text
         # 替换文件中的IP地址和端口号
         updated_content = re.sub(ip_port_pattern, ip_port_repl, file_content)
+        updated_content = re.sub(r'\[\d+\/\d+ \d+\:\d+\]Updated\.', now, updated_content)
         #失效标记
         if ip_port_repl == '88.88.88.88:8888':
             updated_content = re.sub(f'频道.?{group}(失效|)',f'频道[{group}失效', updated_content)
@@ -86,6 +90,7 @@ def update_files(accessible_ip_port,ip_port_pattern,ip_port_repl):
             file_content = response.text
         # 替换文件中的IP地址和端口号
         updated_content_3 = re.sub(ip_port_pattern, ip_port_repl, file_content)
+        updated_content_3 = re.sub(r'\[\d+\/\d+ \d+\:\d+\]Updated\.', now, updated_content_3)
         #失效标记
         if ip_port_repl == '88.88.88.88:8888':
             updated_content_3 = re.sub(f'频道.?{group}(失效|)',f'频道[{group}失效', updated_content_3)
