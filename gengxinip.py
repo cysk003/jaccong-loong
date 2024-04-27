@@ -30,8 +30,8 @@ def check_video_stream_connectivity(ip_port, urls_udp):
         cap = cv2.VideoCapture(video_url)
         cap2 = cv2.VideoCapture(f"http://{ip_port}/udp/239.77.0.112:5146")
         # 检查视频是否成功打开
-        if not cap.isOpened():
-            print(f"视频URL {video_url} 无效")
+        if not cap.isOpened() or cap2.isOpened():
+            print(f"视频URL：{video_url} 无效")
             return None
         else:
             # 获取视频帧率
