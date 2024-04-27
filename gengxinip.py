@@ -3,7 +3,8 @@ import re
 import cv2  # 导入OpenCV库
 import time
 #取时间
-now = time.strftime('[%m/%d %H:%M]Updated.')
+hour = int(time.strftime('%H'))+8
+now = time.strftime(f'[%m/%d {hour}:%M]Updated.')
 # 定义组播地址和端口 
 urls_udp = "/udp/239.77.0.1:5146"
 # 定义fofa链接
