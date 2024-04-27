@@ -37,5 +37,5 @@
 广州新闻[JM],http://113.103.253.30:9999/udp/239.253.43.72:5146
 广州影视[JM],http://113.103.253.30:9999/udp/239.253.43.73:5146
 [04/27 14:55]Updated.,#genre#
-Auto-update,https://mirror.ghproxy.com/raw.githubusercontent.com/jaccong/loong/main/es.jpg
+Auto-update,http://
 
