@@ -4,8 +4,8 @@ on:
    push:
      paths:
       - 'tvtest.py'
-   schedule:
-      - cron: '15 0,4,10 * * *'
+     #schedule:
+      #- cron: '15 0,4,10 * * *'
    workflow_dispatch:
  
 jobs:
