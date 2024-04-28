@@ -59,7 +59,7 @@ def check_video_stream_connectivity(ip_port, urls_udp):
 def update_files(accessible_ip_port,ip_port_pattern,ip_port_repl):
     global updated_content
     global updated_content_3
-    group = re.findall('GZ|FS|JM',ip_port_pattern)[0]
+    group = re.findall('GZ|FS|JM|ZJ',ip_port_pattern)[0]
     #for file_info in files_to_update:
     try:
          # 读取原始文件内容
