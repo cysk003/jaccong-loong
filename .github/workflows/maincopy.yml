@@ -28,7 +28,7 @@ jobs:
         run: python ${{ github.workspace }}/tvtest.py
 
       - name: Run tvbb
-        #run: python ${{ github.workspace }}/tvblist.py
+        run: python ${{ github.workspace }}/tvblist.py
         
       #- name: Run weishi
         #run: python ${{ github.workspace }}/weishi.py
