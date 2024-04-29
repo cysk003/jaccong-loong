@@ -1,5 +1,51 @@
 #EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml"
-#EXTINF:-1 tvg-name="翡翠台" tvg-logo="https://live.fanmingming.com/tv/翡翠台.png" group-title="TVB频道",翡翠台
-http://171.108.74.235:8181/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&down=1
-#EXTINF:-1 tvg-name="" tvg-logo="" group-title="[04/29 16:51]Updated.",Auto-update
+#EXTINF:-1 tvg-name=TVB星河 tvg-logo="https://live.fanmingming.com/tv/TVB星河.png" group-title="广东频道",TVB星河
+http://119.125.104.87:9901/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 tvg-name=广东体育 tvg-logo="https://live.fanmingming.com/tv/广东体育.png" group-title="广东频道",广东体育
+http://171.108.74.235:8181/tsfile/live/2007_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name=广东体育 tvg-logo="https://live.fanmingming.com/tv/广东体育.png" group-title="广东频道",广东体育
+http://119.125.104.87:9901/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 tvg-name=广东公共 tvg-logo="https://live.fanmingming.com/tv/广东公共.png" group-title="广东频道",广东公共
+http://119.125.104.121:9901/tsfile/live/1012_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 tvg-name=广东公共 tvg-logo="https://live.fanmingming.com/tv/广东公共.png" group-title="广东频道",广东公共
+http://119.125.104.87:9901/tsfile/live/1009_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 tvg-name=广东公共 tvg-logo="https://live.fanmingming.com/tv/广东公共.png" group-title="广东频道",广东公共
+http://171.108.74.235:8181/tsfile/live/2109_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name=广东公共 tvg-logo="https://live.fanmingming.com/tv/广东公共.png" group-title="广东频道",广东公共
+http://119.125.104.189:9901/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 tvg-name=广东卫视 tvg-logo="https://live.fanmingming.com/tv/广东卫视.png" group-title="广东频道",广东卫视
+http://171.108.74.235:8181/tsfile/live/2043_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name=广东卫视 tvg-logo="https://live.fanmingming.com/tv/广东卫视.png" group-title="广东频道",广东卫视
+http://119.125.104.87:9901/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 tvg-name=广东卫视 tvg-logo="https://live.fanmingming.com/tv/广东卫视.png" group-title="广东频道",广东卫视
+http://119.125.104.189:9901/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 tvg-name=广东国际 tvg-logo="https://live.fanmingming.com/tv/广东国际.png" group-title="广东频道",广东国际
+http://119.125.104.189:9901/tsfile/live/1015_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 tvg-name=广东少儿 tvg-logo="https://live.fanmingming.com/tv/广东少儿.png" group-title="广东频道",广东少儿
+http://119.125.104.121:9901/tsfile/live/1017_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 tvg-name=广东少儿 tvg-logo="https://live.fanmingming.com/tv/广东少儿.png" group-title="广东频道",广东少儿
+http://171.108.74.235:8181/tsfile/live/2099_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name=广东影视 tvg-logo="https://live.fanmingming.com/tv/广东影视.png" group-title="广东频道",广东影视
+http://171.108.74.235:8181/tsfile/live/2003_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name=广东新闻 tvg-logo="https://live.fanmingming.com/tv/广东新闻.png" group-title="广东频道",广东新闻
+http://119.125.104.87:9901/tsfile/live/1008_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 tvg-name=广东新闻 tvg-logo="https://live.fanmingming.com/tv/广东新闻.png" group-title="广东频道",广东新闻
+http://171.108.74.235:8181/tsfile/live/2108_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name=广东新闻 tvg-logo="https://live.fanmingming.com/tv/广东新闻.png" group-title="广东频道",广东新闻
+http://119.125.104.189:9901/tsfile/live/1012_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 tvg-name=广东珠江 tvg-logo="https://live.fanmingming.com/tv/广东珠江.png" group-title="广东频道",广东珠江
+http://119.125.104.121:9901/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 tvg-name=广东珠江 tvg-logo="https://live.fanmingming.com/tv/广东珠江.png" group-title="广东频道",广东珠江
+http://119.125.104.189:9901/tsfile/live/1011_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 tvg-name=广东珠江 tvg-logo="https://live.fanmingming.com/tv/广东珠江.png" group-title="广东频道",广东珠江
+http://119.125.104.87:9901/tsfile/live/1007_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 tvg-name=广东移动 tvg-logo="https://live.fanmingming.com/tv/广东移动.png" group-title="广东频道",广东移动
+http://119.125.104.189:9901/tsfile/live/1105_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 tvg-name=翡翠台 tvg-logo="https://live.fanmingming.com/tv/翡翠台.png" group-title="广东频道",翡翠台
+http://119.125.104.87:9901/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 tvg-name=翡翠台 tvg-logo="https://live.fanmingming.com/tv/翡翠台.png" group-title="广东频道",翡翠台
+http://119.125.104.121:9901/tsfile/live/1007_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 tvg-name=翡翠台 tvg-logo="https://live.fanmingming.com/tv/翡翠台.png" group-title="广东频道",翡翠台
+http://119.125.104.189:9901/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 tvg-name="" tvg-logo="" group-title="[04/29 22:03]Updated.",Auto-update
 http:// 
