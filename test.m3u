@@ -1,0 +1,5 @@
+#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml"
+#EXTINF:-1 tvg-name="翡翠台" tvg-logo="https://live.fanmingming.com/tv/翡翠台.png" group-title="TVB频道",翡翠台
+http://171.108.74.235:8181/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 tvg-name="" tvg-logo="" group-title="[04/29 16:51]Updated.",Auto-update
+http:// 
