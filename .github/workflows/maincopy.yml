@@ -24,8 +24,8 @@ jobs:
       - name: Install dependencies
         run: pip install selenium requests futures eventlet
 
-      - name: Run tvlist
-        run: python ${{ github.workspace }}/tvtest.py
+      #- name: Run tvlist
+        #run: python ${{ github.workspace }}/tvtest.py
 
       - name: Run tvbb
         run: python ${{ github.workspace }}/tvblist.py
