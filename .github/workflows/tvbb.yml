@@ -1,8 +1,8 @@
 name: tvblist
 on:
-   push:
-     paths:
-      - 'tvblist.py'
+   #push:
+     #paths:
+      #- 'tvblist.py'
    #schedule:
         #- cron: '0 0,4,10 * * *'
    workflow_dispatch:
