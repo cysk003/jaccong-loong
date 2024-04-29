@@ -1,4 +1,27 @@
-TVB频道,#genre#
-翡翠台,http://171.108.74.235:8181/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&down=1
-[04/29 16:51]Updated.,#genre#
+广东频道,#genre#
+TVB星河,http://119.125.104.87:9901/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&down=1
+广东体育,http://171.108.74.235:8181/tsfile/live/2007_1.m3u8?key=txiptv&playlive=1&authid=0
+广东体育,http://119.125.104.87:9901/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&down=1
+广东公共,http://119.125.104.121:9901/tsfile/live/1012_1.m3u8?key=txiptv&playlive=1&down=1
+广东公共,http://119.125.104.87:9901/tsfile/live/1009_1.m3u8?key=txiptv&playlive=1&down=1
+广东公共,http://171.108.74.235:8181/tsfile/live/2109_1.m3u8?key=txiptv&playlive=1&authid=0
+广东公共,http://119.125.104.189:9901/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&down=1
+广东卫视,http://171.108.74.235:8181/tsfile/live/2043_1.m3u8?key=txiptv&playlive=1&authid=0
+广东卫视,http://119.125.104.87:9901/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&down=1
+广东卫视,http://119.125.104.189:9901/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&down=1
+广东国际,http://119.125.104.189:9901/tsfile/live/1015_1.m3u8?key=txiptv&playlive=1&down=1
+广东少儿,http://119.125.104.121:9901/tsfile/live/1017_1.m3u8?key=txiptv&playlive=1&down=1
+广东少儿,http://171.108.74.235:8181/tsfile/live/2099_1.m3u8?key=txiptv&playlive=1&authid=0
+广东影视,http://171.108.74.235:8181/tsfile/live/2003_1.m3u8?key=txiptv&playlive=1&authid=0
+广东新闻,http://119.125.104.87:9901/tsfile/live/1008_1.m3u8?key=txiptv&playlive=1&down=1
+广东新闻,http://171.108.74.235:8181/tsfile/live/2108_1.m3u8?key=txiptv&playlive=1&authid=0
+广东新闻,http://119.125.104.189:9901/tsfile/live/1012_1.m3u8?key=txiptv&playlive=1&down=1
+广东珠江,http://119.125.104.121:9901/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&down=1
+广东珠江,http://119.125.104.189:9901/tsfile/live/1011_1.m3u8?key=txiptv&playlive=1&down=1
+广东珠江,http://119.125.104.87:9901/tsfile/live/1007_1.m3u8?key=txiptv&playlive=1&down=1
+广东移动,http://119.125.104.189:9901/tsfile/live/1105_1.m3u8?key=txiptv&playlive=1&down=1
+翡翠台,http://119.125.104.87:9901/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&down=1
+翡翠台,http://119.125.104.121:9901/tsfile/live/1007_1.m3u8?key=txiptv&playlive=1&down=1
+翡翠台,http://119.125.104.189:9901/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&down=1
+[04/29 22:03]Updated.,#genre#
 Auto-update,http:// 
