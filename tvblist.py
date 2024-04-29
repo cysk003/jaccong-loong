@@ -62,7 +62,8 @@ for url in urls:
     pattern = r"http://\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}:\d+"  # 设置匹配的格式，如http://8.8.8.8:8888
     urls_all = re.findall(pattern, page_content)
     # urls = list(set(urls_all))  # 去重得到唯一的URL列表
-    urls = ['http://119.125.104.125:9901']  # 去重得到唯一的URL列表                             ！！  仅测试119.125.104.XXX:9901  ！！
+    #urls = ['http://119.125.104.125:9901']  # 去重得到唯一的URL列表（测试）         ！！  仅测试119.125.104.XXX:9901  ！！
+    urls = set(urls_all)                   # 去重得到唯一的URL列表（原句） 
     x_urls = []
     for url in urls:  # 对urls进行处理，ip第四位修改为1，并去重
         url = url.strip()
@@ -270,10 +271,10 @@ result_counter = 8  # 每个频道需要的个数
 
 with open("tvbb.txt", 'w', encoding='utf-8') as file:
     channel_counters = {}
-    file.write('央视频道,#genre#\n')
+    file.write('广东频道,#genre#\n')
     for result in results:
         channel_name, channel_url, speed = result
-        if 'CCTV' in channel_name:
+        if '广东' in channel_name or 'TVB' in channel_name or '翡翠' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
@@ -283,34 +284,7 @@ with open("tvbb.txt", 'w', encoding='utf-8') as file:
             else:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
-    channel_counters = {}
-    file.write('卫视频道,#genre#\n')
-    for result in results:
-        channel_name, channel_url, speed = result
-        if '卫视' in channel_name:
-            if channel_name in channel_counters:
-                if channel_counters[channel_name] >= result_counter:
-                    continue
-                else:
-                    file.write(f"{channel_name},{channel_url}\n")
-                    channel_counters[channel_name] += 1
-            else:
-                file.write(f"{channel_name},{channel_url}\n")
-                channel_counters[channel_name] = 1
-    channel_counters = {}
-    file.write('其他频道,#genre#\n')
-    for result in results:
-        channel_name, channel_url, speed = result
-        if 'CCTV' not in channel_name and '卫视' not in channel_name and '测试' not in channel_name:
-            if channel_name in channel_counters:
-                if channel_counters[channel_name] >= result_counter:
-                    continue
-                else:
-                    file.write(f"{channel_name},{channel_url}\n")
-                    channel_counters[channel_name] += 1
-            else:
-                file.write(f"{channel_name},{channel_url}\n")
-                channel_counters[channel_name] = 1
+    
     file.write(f'{now},#genre#\n')
     file.write("Auto-update,http:// \n")
 with open("tvbb.m3u", 'w', encoding='utf-8') as file:
@@ -318,49 +292,18 @@ with open("tvbb.m3u", 'w', encoding='utf-8') as file:
     file.write('#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml"\n')
     for result in results:
         channel_name, channel_url, speed = result
-        if 'CCTV' in channel_name:
+        if '广东' in channel_name or 'TVB' in channel_name or '翡翠' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
                 else:
-                    file.write(f"#EXTINF:-1 tvg-name={channel_name} tvg-logo=\"https://live.fanmingming.com/tv/{channel_name}.png\" group-title=\"央视频道\",{channel_name}\n")
+                    file.write(f"#EXTINF:-1 tvg-name={channel_name} tvg-logo=\"https://live.fanmingming.com/tv/{channel_name}.png\" group-title=\"广东频道\",{channel_name}\n")
                     file.write(f"{channel_url}\n")
                     channel_counters[channel_name] += 1
             else:
-                file.write(f"#EXTINF:-1 tvg-name={channel_name} tvg-logo=\"https://live.fanmingming.com/tv/{channel_name}.png\" group-title=\"央视频道\",{channel_name}\n")
+                file.write(f"#EXTINF:-1 tvg-name={channel_name} tvg-logo=\"https://live.fanmingming.com/tv/{channel_name}.png\" group-title=\"广东频道\",{channel_name}\n")
                 file.write(f"{channel_url}\n")
                 channel_counters[channel_name] = 1
-    channel_counters = {}
-    #file.write('卫视频道,#genre#\n')
-    for result in results:
-        channel_name, channel_url, speed = result
-        if '卫视' in channel_name:
-            if channel_name in channel_counters:
-                if channel_counters[channel_name] >= result_counter:
-                    continue
-                else:
-                    file.write(f"#EXTINF:-1 tvg-name={channel_name} tvg-logo=\"https://live.fanmingming.com/tv/{channel_name}.png\" group-title=\"卫视频道\",{channel_name}\n")
-                    file.write(f"{channel_url}\n")
-                    channel_counters[channel_name] += 1
-            else:
-                file.write(f"#EXTINF:-1 tvg-name={channel_name} tvg-logo=\"https://live.fanmingming.com/tv/{channel_name}.png\" group-title=\"卫视频道\",{channel_name}\n")
-                file.write(f"{channel_url}\n")
-                channel_counters[channel_name] = 1
-    channel_counters = {}
-    #file.write('其他频道,#genre#\n')
-    for result in results:
-        channel_name, channel_url, speed = result
-        if 'CCTV' not in channel_name and '卫视' not in channel_name and '测试' not in channel_name:
-            if channel_name in channel_counters:
-                if channel_counters[channel_name] >= result_counter:
-                    continue
-                else:
-                    file.write(f"#EXTINF:-1 tvg-name={channel_name} tvg-logo=\"https://live.fanmingming.com/tv/{channel_name}.png\" group-title=\"其他频道\",{channel_name}\n")
-                    file.write(f"{channel_url}\n")
-                    channel_counters[channel_name] += 1
-            else:
-                file.write(f"#EXTINF:-1 tvg-name={channel_name} tvg-logo=\"https://live.fanmingming.com/tv/{channel_name}.png\" group-title=\"其他频道\",{channel_name}\n")
-                file.write(f"{channel_url}\n")
-                channel_counters[channel_name] = 1
+    
     file.write(f"#EXTINF:-1 tvg-name=\"\" tvg-logo=\"\" group-title=\"{now}\",Auto-update\n")
     file.write("http:// \n")
