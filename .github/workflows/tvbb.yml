@@ -26,8 +26,8 @@ jobs:
           python-version: 3.x
       - name: Install dependencies
         run: pip install opencv-python requests 
-      - name: Run gengxinip
-        run: python ${{ github.workspace }}/gengxinip.py
+      - name: Run tvblist
+        run: python ${{ github.workspace }}/tvblist.py
      
       - name: Commit results
         run: |
