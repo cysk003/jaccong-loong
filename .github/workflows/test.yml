@@ -1,0 +1,47 @@
+name: test
+
+on:
+   #push:
+     #paths:
+      #- 'tvtest.py'
+     #schedule:
+      #- cron: '15 0,4,10 * * *'
+   workflow_dispatch:
+ 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+    
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: pip install selenium requests futures eventlet
+
+      #- name: Run tvlist
+        #run: python ${{ github.workspace }}/tvtest.py
+
+      - name: Run test
+        run: python ${{ github.workspace }}/test.py
+        
+      #- name: Run weishi
+        #run: python ${{ github.workspace }}/weishi.py
+        
+      #- name: Run qita
+        #run: python ${{ github.workspace }}/qita.py
+        
+      - name: 提交更改
+        run: |
+          git config --local user.email "jaccong@163.com"
+          git config --local user.name "jaccong"
+          git add .
+          git commit *.txt -m "Automatic update"
+          git commit *.m3u -m "Automatic update"
+          #git pull --rebase
+          git push -f
