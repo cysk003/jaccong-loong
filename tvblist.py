@@ -62,7 +62,7 @@ for url in urls:
     pattern = r"http://\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}:\d+"  # 设置匹配的格式，如http://8.8.8.8:8888
     urls_all = re.findall(pattern, page_content)
     # urls = list(set(urls_all))  # 去重得到唯一的URL列表
-    urls = 'http://119.125.104.125:9901'  # 去重得到唯一的URL列表                             ！！  仅测试119.125.104.XXX:9901  ！！
+    urls = ['http://119.125.104.125:9901']  # 去重得到唯一的URL列表                             ！！  仅测试119.125.104.XXX:9901  ！！
     x_urls = []
     for url in urls:  # 对urls进行处理，ip第四位修改为1，并去重
         url = url.strip()
