@@ -106,9 +106,6 @@ for url in urls:
             if result:
                 valid_urls.append(result)
 
-    for url in valid_urls:
-        print(url)
-
 with open("test.txt", 'w', encoding='utf-8') as file:
     file.write('TVB频道,#genre#\n')
     for url in valid_urls:
