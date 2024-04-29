@@ -1,0 +1,4 @@
+TVB频道,#genre#
+翡翠台,http://171.108.74.235:8181/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&down=1
+[04/29 16:51]Updated.,#genre#
+Auto-update,http:// 
