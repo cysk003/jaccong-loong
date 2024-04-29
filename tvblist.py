@@ -13,17 +13,6 @@ eventlet.monkey_patch()
 now = (datetime.datetime.now() + datetime.timedelta(hours=8)).strftime('[%m/%d %H:%M]Updated.')
 urls = [
     "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iTWVpemhvdSI%3D",#梅州
-    "https://fofa.info/result?qbase64=ImlwdHYiICYmIGNpdHk9IkppZXlhbmciICYmIHBvcnQ9IjgwODEi",#揭阳
-    "https://fofa.info/result?qbase64=ImlwdHYiICYmIGNpdHk9IlNoZW56aGVuIiAmJiBwb3J0PSI4MDAi",#深圳
-    "https://fofa.info/result?qbase64=ImlwdHYiICYmIGNpdHk9Ikd1YW5nemhvdSIgJiYgcG9ydD0iODA4Ig%3D%3D",#广州
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iZ3Vhbmdkb25nIg%3D%3D" ,# Guangdong (广东)
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iWmhhb3Fpbmci",#肇庆
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iWmhhbmppYW5nIg%3D%3D",#湛江
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iSHVpemhvdSI%3D",#惠州
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iRm9zaGFuIg%3D%3D",#佛山
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iSGV5dWFuIg%3D%3D",#河源
-    "https://fofa.info/result?qbase64=ImlwdHYiICYmIGNpdHk9Ill1bGluIiAmJiBwb3J0PSI4MTgxIg%3D%3D"#广西玉林
-
 ]
 
 def modify_urls(url):
