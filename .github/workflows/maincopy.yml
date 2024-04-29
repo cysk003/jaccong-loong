@@ -1,9 +1,9 @@
 name: tvtest
 
 on:
-   push:
-     paths:
-      - 'tvtest.py'
+   #push:
+     #paths:
+      #- 'tvtest.py'
      #schedule:
       #- cron: '15 0,4,10 * * *'
    workflow_dispatch:
