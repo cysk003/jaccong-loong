@@ -35,9 +35,9 @@ def is_url_accessible(url):
     try:
         response = requests.get(url, timeout=0.5)
         if response.status_code == 200:
+            print(f'{url} 【有效】')
             return url
     except requests.exceptions.RequestException:
-        print(f'{url}无效')
         pass
     return None
 
