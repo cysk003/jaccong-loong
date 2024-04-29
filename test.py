@@ -13,17 +13,6 @@ eventlet.monkey_patch()
 now = (datetime.datetime.now() + datetime.timedelta(hours=8)).strftime('[%m/%d %H:%M]Updated.')
 urls = [
     "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iTWVpemhvdSI%3D",#梅州
-    "https://fofa.info/result?qbase64=ImlwdHYiICYmIGNpdHk9IkppZXlhbmciICYmIHBvcnQ9IjgwODEi",#揭阳
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iU2hlbnpoZW4i",#深圳
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iR3Vhbmd6aG91Ig%3D%3D",#广州
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iZ3Vhbmdkb25nIg%3D%3D" ,# Guangdong (广东)
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iWmhhb3Fpbmci",#肇庆
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iWmhhbmppYW5nIg%3D%3D",#湛江
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iSHVpemhvdSI%3D",#惠州
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iRm9zaGFuIg%3D%3D",#佛山
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iWmh1aGFpIg%3D%3D",#珠海
-    "https://fofa.info/result?qbase64=ImlwdHYiICYmIGNpdHk9Ilpob25nc2hhbiI%3D",#中山
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iRG9uZ2d1YW4i",#东莞
     "https://fofa.info/result?qbase64=ImlwdHYiICYmIGNpdHk9Ill1bGluIiAmJiBwb3J0PSI4MTgxIg%3D%3D"#广西玉林
 ]
 
@@ -46,7 +35,6 @@ def is_url_accessible(url):
     try:
         response = requests.get(url, timeout=0.5)
         if response.status_code == 200:
-            print(f'{url} 【有效】')
             return url
     except requests.exceptions.RequestException:
         pass
@@ -110,7 +98,7 @@ for url in urls:
                 valid_urls.append(result)
 
     for url in valid_urls:
-        print(url)
+        print(f'{url} 【 有 效 】')
     # 遍历网址列表，获取JSON文件并解析
     for url in valid_urls:
         try:
@@ -138,11 +126,11 @@ for url in urls:
                         #if 'http' in urlx or 'udp' in urlx or 'rtp' in urlx:
                         if 'http' in urlx:
                             urld = f"{urlx}"
-                        else:
-                            urld = f"{url_x}{urlx}"
-                        if 'udp' in urlx:             #找出udp并组合
+                        elif 'udp' in urlx:          #找出udp并组合
                             urld = f"{url_x}/tsfile/live/{num}_1.m3u8?key=txiptv&playlive=1&down=1"
-
+                        else:  
+                            urld = f"{url_x}{urlx}"             
+                            
                         if name and urlx:
                             # 删除特定文字
                             name = name.replace("cctv", "CCTV")
@@ -188,6 +176,8 @@ for url in urls:
                             name = name.replace("CCTV5+体育赛视", "CCTV5+")
                             name = name.replace("CCTV5+体育赛事", "CCTV5+")
                             name = name.replace("CCTV5+体育", "CCTV5+")
+                            name = name.replace("广东科教", "经济科教")
+                            name = name.replace("广东南方购物", "南方购物")
                             results.append(f"{name},{urld}")
             except:
                 continue
