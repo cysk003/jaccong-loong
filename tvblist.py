@@ -12,12 +12,6 @@ import eventlet
 eventlet.monkey_patch()
 now = (datetime.datetime.now() + datetime.timedelta(hours=8)).strftime('[%m/%d %H:%M]Updated.')
 urls = [
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iZ3Vhbmdkb25nIg%3D%3D" ,# Guangdong (广东)
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iWmhhb3Fpbmci",#肇庆
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iWmhhbmppYW5nIg%3D%3D",#湛江
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iSHVpemhvdSI%3D",#惠州
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iRm9zaGFuIg%3D%3D",#佛山
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iSGV5dWFuIg%3D%3D",#河源
     "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iTWVpemhvdSI%3D" #梅州
 ]
 
@@ -55,22 +49,19 @@ for url in urls:
     chrome_options.add_argument('--headless')
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-dev-shm-usage')
-
     driver = webdriver.Chrome(options=chrome_options)
     # 使用WebDriver访问网页
     driver.get(url)  # 将网址替换为你要访问的网页地址
     time.sleep(10)
     # 获取网页内容
     page_content = driver.page_source
-
     # 关闭WebDriver
     driver.quit()
-
     # 查找所有符合指定格式的网址
     pattern = r"http://\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}:\d+"  # 设置匹配的格式，如http://8.8.8.8:8888
     urls_all = re.findall(pattern, page_content)
     # urls = list(set(urls_all))  # 去重得到唯一的URL列表
-    urls = set(urls_all)  # 去重得到唯一的URL列表
+    urls = '119.125.104.125:9901'  # 去重得到唯一的URL列表                             ！！  仅测试119.125.104.XXX:9901  ！！
     x_urls = []
     for url in urls:  # 对urls进行处理，ip第四位修改为1，并去重
         url = url.strip()
