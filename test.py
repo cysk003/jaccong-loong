@@ -118,7 +118,7 @@ with open("test.txt", 'w', encoding='utf-8') as file:
 with open("test.m3u", 'w', encoding='utf-8') as file:
     file.write('#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml"\n')
     for url in valid_urls:
-        file.write(f"#EXTINF:-1 tvg-name="翡翠台" tvg-logo=\"https://live.fanmingming.com/tv/翡翠台.png\" group-title=\"TVB频道\",翡翠台\n")
+        file.write(f"#EXTINF:-1 tvg-name=\"翡翠台\" tvg-logo=\"https://live.fanmingming.com/tv/翡翠台.png\" group-title=\"TVB频道\",翡翠台\n")
         file.write(f"{url}\n")
     file.write(f"#EXTINF:-1 tvg-name=\"\" tvg-logo=\"\" group-title=\"{now}\",Auto-update\n")
     file.write("http:// \n")
