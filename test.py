@@ -113,7 +113,9 @@ for url in urls:
             json_url = f"{url}"
             response = requests.get(json_url, timeout=0.5)
             json_data = response.json()
-
+            print(f'count:{json_data['count']}')
+            if json_data['count'] == 0:
+                print(f'{url} 【 待 测 试 】')
             try:
                 # 解析JSON文件，获取name和url字段
                 for item in json_data['data']:
