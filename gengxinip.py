@@ -59,7 +59,7 @@ def check_video_stream_connectivity(ip_port, urls_udp):
 def update_files(accessible_ip_port,ip_port_pattern,ip_port_repl):
     global updated_content
     global updated_content_3
-    group = re.findall('GZ|FS|JM|MZ',ip_port_pattern)[0]
+    group = re.findall('A|E|J|M',ip_port_pattern)[0]
     #for file_info in files_to_update:
     try:
          # 读取原始文件内容
@@ -153,10 +153,10 @@ files_to_update = [
 ]
 
 #定义正则
-ip_port_pattern = r'((?<=\[GZ\](\,|\n)http://)\d+\.\d+\.\d+\.\d+:\d+)'
-ip_port_pattern_fs = r'((?<=\[FS\](\,|\n)http://)\d+\.\d+\.\d+\.\d+:\d+)'
-ip_port_pattern_jm = r'((?<=\[JM\](\,|\n)http://)\d+\.\d+\.\d+\.\d+:\d+)'
-ip_port_pattern_mz = r'((?<=\[MZ\](\,|\n)http://)\d+\.\d+\.\d+\.\d+:\d+)'
+ip_port_pattern = r'((?<=\[A\](\,|\n)http://)\d+\.\d+\.\d+\.\d+:\d+)'
+ip_port_pattern_fs = r'((?<=\[E\](\,|\n)http://)\d+\.\d+\.\d+\.\d+:\d+)'
+ip_port_pattern_jm = r'((?<=\[J\](\,|\n)http://)\d+\.\d+\.\d+\.\d+:\d+)'
+ip_port_pattern_mz = r'((?<=\[M\](\,|\n)http://)\d+\.\d+\.\d+\.\d+:\d+)'
 ip_port_repl = valid_ip
 ip_port_repl_fs = valid_ip_fs
 ip_port_repl_jm = valid_ip_jm
