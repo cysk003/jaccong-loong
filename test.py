@@ -287,7 +287,7 @@ with open("test.txt", 'w', encoding='utf-8') as file:
     file.write('广东频道,#genre#\n')
     for result in results:
         channel_name, channel_url, speed = result
-        if '广东' in channel_name or 'TVB' in channel_name or '翡翠' in channel_name:
+        if '广东' in channel_name or 'TVB' in channel_name or '翡翠' in channel_name or '大湾区卫视' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
@@ -304,7 +304,7 @@ with open("test.m3u", 'w', encoding='utf-8') as file:
     file.write('#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml"\n')
     for result in results:
         channel_name, channel_url, speed = result
-        if '广东' in channel_name or 'TVB' in channel_name or '翡翠' in channel_name:
+        if '广东' in channel_name or 'TVB' in channel_name or '翡翠' in channel_name or '大湾区卫视' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
