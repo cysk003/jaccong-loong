@@ -178,6 +178,8 @@ for url in urls:
                             name = name.replace("CCTV5+体育赛事", "CCTV5+")
                             name = name.replace("CCTV5+体育", "CCTV5+")
                             name = name.replace("广东科教", "经济科教")
+                            name = name.replace("广东移动", "移动")
+                            name = name.replace("广东国际", "国际")
                             name = name.replace("广东南方购物", "南方购物")
                             results.append(f"{name},{urld}")
             except:
