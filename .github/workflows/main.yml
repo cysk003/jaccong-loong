@@ -1,6 +1,6 @@
 name: genngxinzubo
 on:
-   push:
+   #push:
      #paths:
       #- 'gengxinip.py'
    schedule:
