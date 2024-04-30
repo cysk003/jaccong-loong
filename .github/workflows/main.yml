@@ -1,10 +1,10 @@
 name: genngxinzubo
 on:
    push:
-     paths:
-      - 'gengxinip.py'
-   #schedule:
-        #- cron: '0 0,4,10 * * *'
+     #paths:
+      #- 'gengxinip.py'
+   schedule:
+        - cron: '0 */1 * * *'
    workflow_dispatch:
  
 jobs:
