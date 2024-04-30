@@ -10,7 +10,7 @@ urls_udp = "/udp/239.77.0.1:5146"
 fofa_url = 'https://fofa.info/result?qbase64=InVkcHh5IiAmJiBwcm90b2NvbD0iaHR0cCIgJiYgY2l0eT0iR3Vhbmd6aG91IiAmJiBzZXJ2ZXI9PSJ1ZHB4eSAxLjAtMjUuMCAocHJvZCkgc3RhbmRhcmQgW0xpbnV4IDUuMTAuMTk0IHg4Nl82NF0i'
 fofa_url_jm = 'https://fofa.info/result?qbase64=InVkcHh5IiAmJiBwcm90b2NvbD0iaHR0cCIgJiYgY2l0eT0iSmlhbmdtZW4iICYmIHNlcnZlcj09InVkcHh5IDEuMC0yNS4wIChwcm9kKSBzdGFuZGFyZCBbTGludXggNS4xMC4xOTQgeDg2XzY0XSI%3D'
 fofa_url_fs = 'https://fofa.info/result?qbase64=InVkcHh5IiAmJiBwcm90b2NvbD0iaHR0cCIgJiYgY2l0eT0iRm9zaGFuIiAmJiBzZXJ2ZXI9PSJ1ZHB4eSAxLjAtMjUuMCAocHJvZCkgc3RhbmRhcmQgW0xpbnV4IDUuMTAuMTk0IHg4Nl82NF0i'
-fofa_url_zj = 'https://fofa.info/result?qbase64=InVkcHh5IiAmJiBwcm90b2NvbD0iaHR0cCIgJiYgY2l0eT0iWmhhbmppYW5nIiAmJiBzZXJ2ZXI9PSJ1ZHB4eSAxLjAtMjUuMCAocHJvZCkgc3RhbmRhcmQgW0xpbnV4IDUuMTAuMTk0IHg4Nl82NF0i'
+fofa_url_mz = 'https://fofa.info/result?qbase64=InVkcHh5IiAmJiBwcm90b2NvbD0iaHR0cCIgJiYgY2l0eT0iWmhhbmppYW5nIiAmJiBzZXJ2ZXI9PSJ1ZHB4eSAxLjAtMjUuMCAocHJvZCkgc3RhbmRhcmQgW0xpbnV4IDUuMTAuMTk0IHg4Nl82NF0i'
 
 # 尝试从fofa链接提取IP地址和端口号，并去除重复项
 def extract_unique_ip_ports(fofa_url):
@@ -59,7 +59,7 @@ def check_video_stream_connectivity(ip_port, urls_udp):
 def update_files(accessible_ip_port,ip_port_pattern,ip_port_repl):
     global updated_content
     global updated_content_3
-    group = re.findall('GZ|FS|JM|ZJ',ip_port_pattern)[0]
+    group = re.findall('GZ|FS|JM|MZ',ip_port_pattern)[0]
     #for file_info in files_to_update:
     try:
          # 读取原始文件内容
@@ -136,8 +136,8 @@ unique_ips_ports_fs = extract_unique_ip_ports(fofa_url_fs)
 print(unique_ips_ports_fs)
 unique_ips_ports_jm = extract_unique_ip_ports(fofa_url_jm)
 print(unique_ips_ports_jm)
-unique_ips_ports_zj = extract_unique_ip_ports(fofa_url_zj)
-print(unique_ips_ports_zj)
+unique_ips_ports_mz = extract_unique_ip_ports(fofa_url_mz)
+print(unique_ips_ports_mz)
 
 valid_ip = findtheone(unique_ips_ports)
 print(valid_ip)
@@ -145,8 +145,8 @@ valid_ip_fs = findtheone(unique_ips_ports_fs)
 print(valid_ip_fs)
 valid_ip_jm = findtheone(unique_ips_ports_jm)
 print(valid_ip_jm)
-valid_ip_zj = findtheone(unique_ips_ports_zj)
-print(valid_ip_zj)
+valid_ip_mz = findtheone(unique_ips_ports_mz)
+print(valid_ip_mz)
 # 定义需要更新的文件列表
 files_to_update = [
     {'url': 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/jaccong/loong/main/9.txt', 'filename': '9.txt'}
@@ -156,11 +156,11 @@ files_to_update = [
 ip_port_pattern = r'((?<=\[GZ\](\,|\n)http://)\d+\.\d+\.\d+\.\d+:\d+)'
 ip_port_pattern_fs = r'((?<=\[FS\](\,|\n)http://)\d+\.\d+\.\d+\.\d+:\d+)'
 ip_port_pattern_jm = r'((?<=\[JM\](\,|\n)http://)\d+\.\d+\.\d+\.\d+:\d+)'
-ip_port_pattern_zj = r'((?<=\[ZJ\](\,|\n)http://)\d+\.\d+\.\d+\.\d+:\d+)'
+ip_port_pattern_mz = r'((?<=\[MZ\](\,|\n)http://)\d+\.\d+\.\d+\.\d+:\d+)'
 ip_port_repl = valid_ip
 ip_port_repl_fs = valid_ip_fs
 ip_port_repl_jm = valid_ip_jm
-ip_port_repl_zj = valid_ip_zj
+ip_port_repl_mz = valid_ip_mz
 
 # 更新文件中的IP地址和端口号
 updated_content = ''
@@ -168,5 +168,5 @@ updated_content_3 = ''
 update_files(valid_ip,ip_port_pattern,ip_port_repl)
 update_files(valid_ip_fs,ip_port_pattern_fs,ip_port_repl_fs)
 update_files(valid_ip_jm,ip_port_pattern_jm,ip_port_repl_jm)
-update_files(valid_ip_zj,ip_port_pattern_zj,ip_port_repl_zj)
+update_files(valid_ip_mz,ip_port_pattern_mz,ip_port_repl_mz)
 
