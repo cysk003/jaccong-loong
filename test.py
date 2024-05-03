@@ -197,8 +197,8 @@ try:  #取现有[m3u]name&url
     oldname=re.findall(r'(?<=/tv/).*(?=\.png)',oldreq)
     oldurl=re.findall(r'http://.*(?=\n)',oldreq)
     for i in range(len(oldname)):
-        if not f'{oldname[i]},{oldurl[i]}' in result:
-            result.append(f'{oldname[i]},{oldurl[i]}')
+        if not f'{oldname[i]},{oldurl[i]}' in results:
+            results.append(f'{oldname[i]},{oldurl[i]}')
 except:
     print('##取现有[m3u]步骤出错##')
 
