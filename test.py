@@ -187,7 +187,7 @@ for url in urls:
                             name = name.replace("广东南方购物", "南方购物")
                             name = name.replace("广东南方卫视", "大湾区卫视")
                             results.append(f"{name},{urld}")
-                            print(f'results:{results}')
+                print(f'results:{results}')            
             except:
                 continue
         except:
@@ -205,8 +205,9 @@ try:  #取现有[m3u]name&url
     for i in range(len(oldname)):
         if not f'{oldname[i]},{oldurl[i]}' in results:
             results.append(f'{oldname[i]},{oldurl[i]}')
-except:
+except Exception as e:
     print('##取现有[m3u]步骤出错##')
+    print(f'{e}')
 
 
 channels = []
