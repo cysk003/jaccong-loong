@@ -4,7 +4,6 @@
 翡翠台,http://119.125.115.100:9901/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
 翡翠台,http://119.125.104.72:9901/tsfile/live/1007_1.m3u8?key=txiptv&playlive=1&down=1
 广东综艺,http://219.135.208.218:8083/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&authid=0
-广东经济科教,http://219.135.208.218:8083/tsfile/live/1002_1.m3u8?key=txiptv&playlive=1&authid=0
 广东珠江,http://219.135.208.218:8083/tsfile/live/0017_1.m3u8?key=txiptv&playlive=1&authid=0
 广东珠江,http://119.125.134.234:9901/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&down=1
 广东珠江,http://119.125.134.222:9901/tsfile/live/1001_1.m3u8?key=txiptv&playlive=1&down=1
@@ -26,7 +25,6 @@
 广东卫视,http://119.125.134.222:9901/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&down=1
 广东卫视,http://119.125.115.100:9901/tsfile/live/1009_1.m3u8?key=txiptv&playlive=1&authid=0
 广东卫视,http://116.21.122.2:4433/tsfile/live/0125_1.m3u8?key=txiptv&playlive=1&authid=0
-广东南方卫视,http://219.135.208.218:8083/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&authid=0
 广东公共,http://219.135.208.218:8083/tsfile/live/0019_1.m3u8?key=txiptv&playlive=1&authid=0
 广东公共,http://119.125.134.234:9901/tsfile/live/1002_1.m3u8?key=txiptv&playlive=1&down=1
 广东公共,http://119.125.134.222:9901/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&down=1
@@ -38,5 +36,6 @@
 广东体育,http://119.125.115.100:9901/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&authid=0
 广东体育,http://119.125.104.72:9901/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&down=1
 广东体育,http://116.21.122.2:4433/tsfile/live/0142_1.m3u8?key=txiptv&playlive=1&authid=0
-[05/03 12:19]Updated.,#genre#
+大湾区卫视,http://219.135.208.218:8083/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&authid=0
+[05/03 12:35]Updated.,#genre#
 Auto-update,http:// 
