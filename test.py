@@ -186,6 +186,7 @@ for url in urls:
                             name = name.replace("广东国际", "国际")
                             name = name.replace("广东南方购物", "南方购物")
                             name = name.replace("广东南方卫视", "大湾区卫视")
+                            name = name.replace("南方卫视", "大湾区卫视")
                             results.append(f"{name},{urld}")
                             
             except:
