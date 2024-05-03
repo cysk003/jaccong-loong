@@ -187,27 +187,12 @@ for url in urls:
                             name = name.replace("广东南方购物", "南方购物")
                             name = name.replace("广东南方卫视", "大湾区卫视")
                             results.append(f"{name},{urld}")
-                print(f'results:{results}')            
+                            
             except:
                 continue
         except:
             continue
 
-oldurl = None    
-oldname = None
-try:  #取现有[m3u]name&url
-    oldreq=requests.get('https://mirror.ghproxy.com/https://raw.githubusercontent.com/jaccong/loong/main/test.m3u').text.strip()
-    print(f'oldreq:{oldreq}')
-    oldname=re.findall(r'(?<=/tv/).*(?=\.png)',oldreq)
-    print(f'oldname:{oldname}')
-    oldurl=re.findall(r'http://.*(?=\n)',oldreq)
-    print(f'oldurl:{oldurl}')
-    for i in range(len(oldname)):
-        if not f'{oldname[i]},{oldurl[i]}' in results:
-            results.append(f'{oldname[i]},{oldurl[i]}')
-except Exception as e:
-    print('##取现有[m3u]步骤出错##')
-    print(f'{e}')
 
 
 channels = []
