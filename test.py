@@ -17,7 +17,7 @@ urls = [
     "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgcmVnaW9uPSJHdWFuZ2Rvbmci",#Guangdong
     "https://fofa.info/result?qbase64=ImlwdHYiICYmIGNpdHk9Ill1bGluIiAmJiBwb3J0PSI4MTgxIg%3D%3D"#广西玉林
 ]
-
+  
 def modify_urls(url):
     modified_urls = []
     ip_start_index = url.find("//") + 2
@@ -133,7 +133,7 @@ for url in urls:
                         elif 'udp' in urlx:          #找出udp并组合
                             urld = f"{url_x}/tsfile/live/{num}_1.m3u8?key=txiptv&playlive=1&down=1"
                         else:  
-                            urld = f"{url_x}{urlx}"             
+                            urld = f"{url_x}{urlx}"  
                             
                         if name and urlx:
                             # 删除特定文字
@@ -190,9 +190,20 @@ for url in urls:
         except:
             continue
 
+oldurl = None    
+oldname = None
+try:  #取现有[m3u]name&url
+    oldreq=requests.get('https://mirror.ghproxy.com/https://raw.githubusercontent.com/jaccong/loong/main/test.m3u').text.strip()
+    oldname=re.findall(r'(?<=/tv/).*(?=\.png)',oldreq)
+    oldurl=re.findall(r'http://.*(?=\n)',oldreq)
+    for i in range(len(oldname)):
+        if not f'{oldname[i]},{oldurl[i]}' in result:
+            result.append(f'{oldname[i]},{oldurl[i]}')
+except:
+    print('##取现有[m3u]步骤出错##')
+
 
 channels = []
-
 for result in results:
     line = result.strip()
     if result:
