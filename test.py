@@ -139,6 +139,8 @@ for url in urls:
                             
                         if name and urlx:
                             # 删除特定文字
+                            name = name.replace("珠江高清", "广东珠江")
+                            name = name.replace("珠江卫视", "广东珠江")
                             name = name.replace("cctv", "CCTV")
                             name = name.replace("中央", "CCTV")
                             name = name.replace("央视", "CCTV")
@@ -191,7 +193,7 @@ for url in urls:
                             name = name.replace("南方卫视", "大湾区卫视")
                             name = name.replace("广东综艺", "综艺")
                             name = name.replace("广东公共", "广东民生")
-                            name = name.replace("珠江", "广东珠江")
+                    
                             results.append(f"{name},{urld}")
                             
             except:
