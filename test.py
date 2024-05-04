@@ -192,6 +192,7 @@ for url in urls:
                             name = name.replace("南方卫视", "大湾区卫视")
                             name = name.replace("广东综艺", "综艺")
                             name = name.replace("广东公共", "广东民生")
+                            name = name.replace("珠江", "广东珠江")
                             results.append(f"{name},{urld}")
                             
             except:
