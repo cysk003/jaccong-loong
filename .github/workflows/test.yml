@@ -5,7 +5,7 @@ on:
      #paths:
       #- 'tvtest.py'
    schedule:
-      - cron: '15 */4 * * *'
+      - cron: '30 9 * * *'
    workflow_dispatch:
  
 jobs:
