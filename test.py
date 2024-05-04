@@ -82,9 +82,9 @@ for url in urls:
         modified_ip = f"{ip_address}{ip_end}"
         x_url = f"{base_url}{modified_ip}{port}"
         x_urls.append(x_url)
+    x_urls.append("119.125.129.1")
+    x_urls.append("183.239.226.1")
     urls = set(x_urls)  # 去重得到唯一的URL列表
-    urls.append("119.125.129.1")
-    urls.append("183.239.226.1")
 
     valid_urls = []
     #   多线程获取可用url
