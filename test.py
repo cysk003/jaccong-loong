@@ -85,7 +85,7 @@ for url in urls:
     x_urls.append("119.125.129.1:9901")
     x_urls.append("183.239.226.1:9901")
     x_urls.append("120.196.171.1:9901")
-    
+    print(x_urls)
     urls = set(x_urls)  # 去重得到唯一的URL列表
 
     valid_urls = []
