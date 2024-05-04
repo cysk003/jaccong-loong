@@ -13,8 +13,6 @@ eventlet.monkey_patch()
 now = (datetime.datetime.now() + datetime.timedelta(hours=8)).strftime('[%m/%d %H:%M]Updated.')
 urls = [
     "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iTWVpemhvdSI%3D",#梅州
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iWmhhb3Fpbmci",#肇庆
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgcmVnaW9uPSJHdWFuZ2Rvbmci",#Guangdong
     "https://fofa.info/result?qbase64=ImlwdHYiICYmIGNpdHk9Ill1bGluIiAmJiBwb3J0PSI4MTgxIg%3D%3D"#广西玉林
 ]
   
@@ -84,6 +82,8 @@ for url in urls:
         x_url = f"{base_url}{modified_ip}{port}"
         x_urls.append(x_url)
     urls = set(x_urls)  # 去重得到唯一的URL列表
+    urls.append("119.125.129.1")
+    urls.append("183.239.226.1")
 
     valid_urls = []
     #   多线程获取可用url
