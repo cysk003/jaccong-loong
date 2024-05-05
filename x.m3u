@@ -1,4 +1,5 @@
 #EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml"
+#EXT-X-TIME 0505 
 
 #EXTINF:-1 tvg-name="广东珠江" tvg-logo="https://live.fanmingming.com/tv/广东珠江.png" group-title="广东频道",广东珠江
 http://120.238.85.131:9901/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&down=1
