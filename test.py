@@ -322,6 +322,20 @@ with open("test.txt", 'w', encoding='utf-8') as file:
             else:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
+        channel_counters = {}
+    file.write('其它频道,#genre#\n')
+    for result in results:
+        channel_name, channel_url, speed = result
+        if '卫视' in channel_name or 'CCTV' in channel_name:
+            if channel_name in channel_counters:
+                if channel_counters[channel_name] >= result_counter:
+                    continue
+                else:
+                    file.write(f"{channel_name},{channel_url}\n")
+                    channel_counters[channel_name] += 1
+            else:
+                file.write(f"{channel_name},{channel_url}\n")
+                channel_counters[channel_name] = 1
     file.write(f'{now},#genre#\n')
     file.write("Auto-update,http:// \n")
 with open("test.m3u", 'w', encoding='utf-8') as file:
@@ -339,6 +353,22 @@ with open("test.m3u", 'w', encoding='utf-8') as file:
                     channel_counters[channel_name] += 1
             else:
                 file.write(f"#EXTINF:-1 tvg-name={channel_name} tvg-logo=\"https://live.fanmingming.com/tv/{channel_name}.png\" group-title=\"广东频道\",{channel_name}\n")
+                file.write(f"{channel_url}\n")
+                channel_counters[channel_name] = 1
+     channel_counters = {}
+    #file.write('其它频道,#genre#\n')
+    for result in results:
+        channel_name, channel_url, speed = result
+        if '卫视' in channel_name or 'CCTV' in channel_name:
+            if channel_name in channel_counters:
+                if channel_counters[channel_name] >= result_counter:
+                    continue
+                else:
+                    file.write(f"#EXTINF:-1 tvg-name={channel_name} tvg-logo=\"https://live.fanmingming.com/tv/{channel_name}.png\" group-title=\"其它频道\",{channel_name}\n")
+                    file.write(f"{channel_url}\n")
+                    channel_counters[channel_name] += 1
+            else:
+                file.write(f"#EXTINF:-1 tvg-name={channel_name} tvg-logo=\"https://live.fanmingming.com/tv/{channel_name}.png\" group-title=\"其它频道\",{channel_name}\n")
                 file.write(f"{channel_url}\n")
                 channel_counters[channel_name] = 1
     file.write(f"#EXTINF:-1 tvg-name=\"\" tvg-logo=\"\" group-title=\"{now}\",Auto-update\n")
