@@ -322,7 +322,7 @@ with open("test.txt", 'w', encoding='utf-8') as file:
             else:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
-        channel_counters = {}
+    channel_counters = {}
     file.write('其它频道,#genre#\n')
     for result in results:
         channel_name, channel_url, speed = result
@@ -355,7 +355,7 @@ with open("test.m3u", 'w', encoding='utf-8') as file:
                 file.write(f"#EXTINF:-1 tvg-name={channel_name} tvg-logo=\"https://live.fanmingming.com/tv/{channel_name}.png\" group-title=\"广东频道\",{channel_name}\n")
                 file.write(f"{channel_url}\n")
                 channel_counters[channel_name] = 1
-     channel_counters = {}
+    channel_counters = {}
     #file.write('其它频道,#genre#\n')
     for result in results:
         channel_name, channel_url, speed = result
