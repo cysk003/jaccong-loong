@@ -82,7 +82,11 @@ for url in urls:
         modified_ip = f"{ip_address}{ip_end}"
         x_url = f"{base_url}{modified_ip}{port}"
         x_urls.append(x_url)
+    x_urls.append("http://119.125.44.1:9901")
+    x_urls.append("http://119.125.128.1:9901")
     x_urls.append("http://119.125.129.1:9901")
+    x_urls.append("http://119.125.130.1:9901")
+    x_urls.append("http://119.125.131.1:9901")
     x_urls.append("http://119.125.134.1:9901")
     x_urls.append("http://120.238.84.1:9901")
     x_urls.append("http://183.237.246.1:9931")
@@ -90,6 +94,8 @@ for url in urls:
     x_urls.append("http://120.196.171.1:9901")
     x_urls.append("http://59.32.50.1:9901")
     x_urls.append("http://59.32.96.1:9901")
+    x_urls.append("http://59.32.97.1:9901")
+    x_urls.append("http://59.32.98.1:9901")
     x_urls.append("http://61.146.188.1:9901")
     urls = set(x_urls)  # 去重得到唯一的URL列表
 
