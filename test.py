@@ -158,7 +158,9 @@ for url in urls:
                             name = name.replace("cctv", "CCTV")
                             name = name.replace("中央", "CCTV")
                             name = name.replace("央视", "CCTV")
+                            name = name.replace("上海", "")
                             name = name.replace("高清", "")
+                            name = name.replace("搞清", "")
                             name = name.replace("超高", "")
                             name = name.replace("HD", "")
                             name = name.replace("标清", "")
@@ -303,12 +305,13 @@ def channel_key(channel_name):
 #print(results)
 #results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
 #results.sort(key=lambda x: channel_key(x[0]))
-results.sort(reverse=True)
+
 
 result_counter = 8  # 每个频道需要的个数
 
 with open("test.txt", 'w', encoding='utf-8') as file:
     channel_counters = {}
+    results.sort(reverse=True)
     file.write('广东频道,#genre#\n')
     for result in results:
         channel_name, channel_url, speed = result
@@ -323,6 +326,8 @@ with open("test.txt", 'w', encoding='utf-8') as file:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
     channel_counters = {}
+    results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
+    results.sort(key=lambda x: channel_key(x[0]))
     file.write('其它频道,#genre#\n')
     for result in results:
         channel_name, channel_url, speed = result
@@ -339,6 +344,7 @@ with open("test.txt", 'w', encoding='utf-8') as file:
     file.write(f'{now},#genre#\n')
     file.write("Auto-update,http:// \n")
 with open("test.m3u", 'w', encoding='utf-8') as file:
+    results.sort(reverse=True)
     channel_counters = {}
     file.write('#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml"\n')
     for result in results:
@@ -356,6 +362,8 @@ with open("test.m3u", 'w', encoding='utf-8') as file:
                 file.write(f"{channel_url}\n")
                 channel_counters[channel_name] = 1
     channel_counters = {}
+    results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
+    results.sort(key=lambda x: channel_key(x[0]))
     #file.write('其它频道,#genre#\n')
     for result in results:
         channel_name, channel_url, speed = result
