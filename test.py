@@ -34,7 +34,7 @@ def modify_urls(url):
 
 def is_url_accessible(url):
     try:
-        response = requests.get(url, timeout=1)
+        response = requests.get(url, timeout=2)
         if response.status_code == 200:
             return url
     except requests.exceptions.RequestException:
@@ -82,21 +82,14 @@ for url in urls:
         modified_ip = f"{ip_address}{ip_end}"
         x_url = f"{base_url}{modified_ip}{port}"
         x_urls.append(x_url)
-    x_urls.append("http://119.125.44.1:9901")
-    x_urls.append("http://119.125.128.1:9901")
-    x_urls.append("http://119.125.129.1:9901")
-    x_urls.append("http://119.125.130.1:9901")
-    x_urls.append("http://119.125.131.1:9901")
-    x_urls.append("http://119.125.134.1:9901")
+    x_urls.append("http://119.125.44.1:9901","http://119.125.128.1:9901","http://119.125.129.1:9901","http://119.125.130.1:9901","http://119.125.131.1:9901","http://119.125.134.1:9901")
     x_urls.append("http://120.238.84.1:9901")
     x_urls.append("http://183.237.246.1:9931")
     x_urls.append("http://183.239.226.1:9901")
     x_urls.append("http://120.196.171.1:9901")
-    x_urls.append("http://59.32.50.1:9901")
-    x_urls.append("http://59.32.96.1:9901")
-    x_urls.append("http://59.32.97.1:9901")
-    x_urls.append("http://59.32.98.1:9901")
+    x_urls.append("http://59.32.50.1:9901","http://59.32.96.1:9901","http://59.32.97.1:9901","http://59.32.98.1:9901")
     x_urls.append("http://61.146.188.1:9901")
+    print(x_urls)
     urls = set(x_urls)  # 去重得到唯一的URL列表
 
     valid_urls = []
@@ -128,7 +121,7 @@ for url in urls:
             url_x = f"{base_url}{ip_address}"
 
             json_url = f"{url}"
-            response = requests.get(json_url, timeout=1)
+            response = requests.get(json_url, timeout=2)
             json_data = response.json()
             if json_data['count'] == 0:
                 print(f'{url} 【 待 测 试 】')
@@ -239,7 +232,7 @@ def worker():
         channel_name, channel_url = task_queue.get()
         try:
             channel_url_t = channel_url.rstrip(channel_url.split('/')[-1])  # m3u8链接前缀
-            lines = requests.get(channel_url, timeout = 3).text.strip().split('\n')  # 获取m3u8文件内容
+            lines = requests.get(channel_url, timeout = 4).text.strip().split('\n')  # 获取m3u8文件内容
             ts_lists = [line.split('/')[-1] for line in lines if line.startswith('#') == False]  # 获取m3u8文件下视频流后缀
             ts_lists_0 = ts_lists[0].rstrip(ts_lists[0].split('.ts')[-1])  # m3u8链接前缀
             ts_url = channel_url_t + ts_lists[0]  # 拼接单个视频片段下载链接
@@ -247,7 +240,7 @@ def worker():
             # 多获取的视频数据进行5秒钟限制
             with eventlet.Timeout(5, False):
                 start_time = time.time()
-                content = requests.get(ts_url, timeout = 3).content
+                content = requests.get(ts_url, timeout = 4).content
                 end_time = time.time()
                 response_time = (end_time - start_time) * 1
 
