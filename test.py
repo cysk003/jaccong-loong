@@ -314,6 +314,8 @@ with open("test.txt", 'w', encoding='utf-8') as file:
     channel_counters = {}
     results.sort(reverse=True)
     file.write('广东频道,#genre#\n')
+    file.write('纬来体育,http://hls.szsummer.cn/live/446035/playlist.m3u8?k=32f9ec7c13e4b390289143a8e1b2a898&t=1840341130\n')
+    file.write('TVBPlus,https://ha.jmied.com/aa/aa.flv?auth_key=1661958232-0-0-3d9174957759709f8b53448167c0b6f6\n')
     for result in results:
         channel_name, channel_url, speed = result
         if '广东' in channel_name or 'TVB' in channel_name or '翡翠' in channel_name or '嘉佳' in channel_name or '大湾区卫视' in channel_name:
