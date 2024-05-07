@@ -13,8 +13,8 @@ eventlet.monkey_patch()
 now = (datetime.datetime.now() + datetime.timedelta(hours=8)).strftime('[%m/%d %H:%M]Updated.')
 urls = [
     "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iTWVpemhvdSI%3D",#梅州
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgcmVnaW9uPSJHdWFuZ2Rvbmci",#Guangdong
-    "https://fofa.info/result?qbase64=ImlwdHYiICYmIGNpdHk9Ill1bGluIiAmJiBwb3J0PSI4MTgxIg%3D%3D"#广西玉林
+    ##"https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgcmVnaW9uPSJHdWFuZ2Rvbmci",#Guangdong
+    ##"https://fofa.info/result?qbase64=ImlwdHYiICYmIGNpdHk9Ill1bGluIiAmJiBwb3J0PSI4MTgxIg%3D%3D"#广西玉林
 ]
   
 def modify_urls(url):
@@ -83,9 +83,14 @@ for url in urls:
         x_url = f"{base_url}{modified_ip}{port}"
         x_urls.append(x_url)
     x_urls.append("http://119.125.129.1:9901")
+    x_urls.append("http://119.125.134.1:9901")
+    x_urls.append("http://120.238.84.1:9901")
+    x_urls.append("http://183.237.246.1:9931")
     x_urls.append("http://183.239.226.1:9901")
     x_urls.append("http://120.196.171.1:9901")
-    x_urls.append("http://119.125.134.1:9901")
+    x_urls.append("http://59.32.50.1:9901")
+    x_urls.append("http://59.32.96.1:9901")
+    x_urls.append("http://61.146.188.1:9901")
     urls = set(x_urls)  # 去重得到唯一的URL列表
 
     valid_urls = []
