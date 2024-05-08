@@ -219,6 +219,7 @@ for url in urls:
                             name = name.replace("广东珠江1", "广东珠江")
                             name = name.replace("北京纪实卫视", "北京纪实")
                             name = name.replace("上海东方", "东方")
+                            name = name.replace("上海卫视", "东方卫视")
                             name = name.replace("综合卫视", "综合")
                             name = name.replace("康巴卫视", "")
                             name = name.replace("安多卫视", "")
