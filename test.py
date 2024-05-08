@@ -98,7 +98,6 @@ for url in urls:
     x_urls.append("http://59.32.97.1:9901")
     x_urls.append("http://59.32.98.1:9901")
     x_urls.append("http://61.146.188.1:9901")
-    print(x_urls)
     urls = set(x_urls)  # 去重得到唯一的URL列表
 
     valid_urls = []
