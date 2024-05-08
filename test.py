@@ -320,8 +320,34 @@ def channel_key(channel_name):
 
 # 对频道进行排序
 #print(results)
-results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
-results.sort(key=lambda x: channel_key(x[0]))
+def shunxu(x):
+  if '翡翠' in x[0]:
+    return  1
+  if '星河' in x[0]:
+    return  2
+  if '广东卫视' in x[0]:
+    return  3
+  if '珠江' in x[0]:
+    return  4
+  if '体育' in x[0]:
+    return  5
+  if '大湾区' in x[0]:
+    return  6
+  if '新闻' in x[0]:
+    return  7  
+  if '影视' in x[0]:
+    return  8
+  if '民生' in x[0]:
+    return  9
+  if '少儿' in x[0]:
+    return  10
+  if '嘉佳' in x[0]:
+    return  11
+  return 999999
+results.sort()
+results.sort(key=shunxu)
+#results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
+#results.sort(key=lambda x: channel_key(x[0]))
 
 
 result_counter = 8  # 每个频道需要的个数
