@@ -210,6 +210,9 @@ for url in urls:
                             name = name.replace("广东综艺", "综艺")
                             name = name.replace("广东嘉佳", "嘉佳卡通")
                             name = name.replace("广东公共", "广东民生")
+                            name = name.replace("北京纪实卫视", "北京纪实")
+                            name = name.replace("综合卫视", "综合")
+                            name = name.replace("文华", "文化")
                     
                             results.append(f"{name},{urld}")
                             
