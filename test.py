@@ -154,7 +154,7 @@ for url in urls:
                         if name and urlx:
                             # 删除特定文字
                             name = name.replace("广东嘉佳卡通", "嘉佳卡通")
-                            name = name.replace("星河频道", "TVB星河")
+                            name = name.replace("星河频道", "TVB星河台")
                             name = name.replace("珠江卫视", "广东珠江")
                             name = name.replace("珠江台", "广东珠江")
                             name = name.replace("cctv", "CCTV")
@@ -223,7 +223,7 @@ for url in urls:
                             name = name.replace("康巴卫视", "")
                             name = name.replace("安多卫视", "")
                             name = name.replace("文华", "文化")
-                            
+                            name = name.replace("翡翠台", "TVB翡翠台")                           
                     
                             results.append(f"{name},{urld}")
                             
@@ -327,7 +327,7 @@ result_counter = 8  # 每个频道需要的个数
 
 with open("test.txt", 'w', encoding='utf-8') as file:
     channel_counters = {}
-    results.sort(reverse=True)
+    results.sort()
     file.write('广东频道,#genre#\n')
     file.write('纬来体育,http://hls.szsummer.cn/live/446035/playlist.m3u8?k=32f9ec7c13e4b390289143a8e1b2a898&t=1840341130\n')
     file.write('TVBPlus,https://ha.jmied.com/aa/aa.flv?auth_key=1661958232-0-0-3d9174957759709f8b53448167c0b6f6\n')
@@ -375,7 +375,7 @@ with open("test.txt", 'w', encoding='utf-8') as file:
     file.write(f'{now},#genre#\n')
     file.write("Auto-update,http:// \n")
 with open("test.m3u", 'w', encoding='utf-8') as file:
-    results.sort(reverse=True)
+    results.sort()
     channel_counters = {}
     file.write('#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml"\n')
     for result in results:
