@@ -154,7 +154,7 @@ for url in urls:
                         if name and urlx:
                             # 删除特定文字
                             name = name.replace("广东嘉佳卡通", "嘉佳卡通")
-                            name = name.replace("星河频道", "TVB星河台")
+                            name = name.replace("星河频道", "TVB星河")
                             name = name.replace("珠江卫视", "广东珠江")
                             name = name.replace("珠江台", "广东珠江")
                             name = name.replace("cctv", "CCTV")
