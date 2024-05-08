@@ -159,7 +159,7 @@ for url in urls:
                             name = name.replace("cctv", "CCTV")
                             name = name.replace("中央", "CCTV")
                             name = name.replace("央视", "CCTV")
-                            name = name.replace("上海", "")
+                            name = name.replace("CCTVCCTV", "CCTV央视")
                             name = name.replace("高清", "")
                             name = name.replace("搞清", "")
                             name = name.replace("超高", "")
@@ -199,6 +199,7 @@ for url in urls:
                             name = name.replace("CCTV17农业农村", "CCTV17")
                             name = name.replace("CCTV17农业", "CCTV17")
                             name = name.replace("CCTV5+体育赛视", "CCTV5+")
+                            name = name.replace("CCTV5体育赛事", "CCTV5+")
                             name = name.replace("CCTV5+体育赛事", "CCTV5+")
                             name = name.replace("CCTV5+体育", "CCTV5+")
                             name = name.replace("广东科教", "经济科教")
@@ -212,7 +213,10 @@ for url in urls:
                             name = name.replace("广东嘉佳", "嘉佳卡通")
                             name = name.replace("广东公共", "广东民生")
                             name = name.replace("北京纪实卫视", "北京纪实")
+                            name = name.replace("上海东方", "上海")
                             name = name.replace("综合卫视", "综合")
+                            name = name.replace("康巴卫视", "")
+                            name = name.replace("安多卫视", "")
                             name = name.replace("文华", "文化")
                     
                             results.append(f"{name},{urld}")
@@ -229,7 +233,8 @@ for result in results:
     line = result.strip()
     if result:
         channel_name, channel_url = result.split(',')
-        channels.append((channel_name, channel_url))
+        if '广东' in channel_name or 'TVB' in channel_name or '翡翠' in channel_name or '嘉佳' in channel_name or '卫视' in channel_name or 'CCTV' in channel_name:
+            channels.append((channel_name, channel_url))
 
 # 线程安全的队列，用于存储下载任务
 task_queue = Queue()
@@ -247,7 +252,7 @@ def worker():
         channel_name, channel_url = task_queue.get()
         try:
             channel_url_t = channel_url.rstrip(channel_url.split('/')[-1])  # m3u8链接前缀
-            lines = requests.get(channel_url, timeout = 1).text.strip().split('\n')  # 获取m3u8文件内容
+            lines = requests.get(channel_url, timeout = 0.8).text.strip().split('\n')  # 获取m3u8文件内容
             ts_lists = [line.split('/')[-1] for line in lines if line.startswith('#') == False]  # 获取m3u8文件下视频流后缀
             ts_lists_0 = ts_lists[0].rstrip(ts_lists[0].split('.ts')[-1])  # m3u8链接前缀
             ts_url = channel_url_t + ts_lists[0]  # 拼接单个视频片段下载链接
@@ -255,7 +260,7 @@ def worker():
             # 多获取的视频数据进行5秒钟限制
             with eventlet.Timeout(5, False):
                 start_time = time.time()
-                content = requests.get(ts_url, timeout = 1).content
+                content = requests.get(ts_url, timeout = 0.8).content
                 end_time = time.time()
                 response_time = (end_time - start_time) * 1
 
@@ -286,7 +291,7 @@ def worker():
 
 
 # 创建多个工作线程
-num_threads = 10
+num_threads = 12
 for _ in range(num_threads):
     t = threading.Thread(target=worker, daemon=True)  # 将工作线程设置为守护线程
     t.start()
@@ -335,10 +340,23 @@ with open("test.txt", 'w', encoding='utf-8') as file:
     channel_counters = {}
     results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
     results.sort(key=lambda x: channel_key(x[0]))
-    file.write('其它频道,#genre#\n')
+    file.write('央视频道,#genre#\n')
     for result in results:
         channel_name, channel_url, speed = result
-        if '卫视' in channel_name or 'CCTV' in channel_name:
+        if 'CCTV' in channel_name:
+            if channel_name in channel_counters:
+                if channel_counters[channel_name] >= result_counter:
+                    continue
+                else:
+                    file.write(f"{channel_name},{channel_url}\n")
+                    channel_counters[channel_name] += 1
+            else:
+                file.write(f"{channel_name},{channel_url}\n")
+                channel_counters[channel_name] = 1
+    file.write('卫视频道,#genre#\n')
+    for result in results:
+        channel_name, channel_url, speed = result
+        if '卫视' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
@@ -366,24 +384,6 @@ with open("test.m3u", 'w', encoding='utf-8') as file:
                     channel_counters[channel_name] += 1
             else:
                 file.write(f"#EXTINF:-1 tvg-name={channel_name} tvg-logo=\"https://live.fanmingming.com/tv/{channel_name}.png\" group-title=\"广东频道\",{channel_name}\n")
-                file.write(f"{channel_url}\n")
-                channel_counters[channel_name] = 1
-    channel_counters = {}
-    results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
-    results.sort(key=lambda x: channel_key(x[0]))
-    #file.write('其它频道,#genre#\n')
-    for result in results:
-        channel_name, channel_url, speed = result
-        if '卫视' in channel_name or 'CCTV' in channel_name:
-            if channel_name in channel_counters:
-                if channel_counters[channel_name] >= result_counter:
-                    continue
-                else:
-                    file.write(f"#EXTINF:-1 tvg-name={channel_name} tvg-logo=\"https://live.fanmingming.com/tv/{channel_name}.png\" group-title=\"其它频道\",{channel_name}\n")
-                    file.write(f"{channel_url}\n")
-                    channel_counters[channel_name] += 1
-            else:
-                file.write(f"#EXTINF:-1 tvg-name={channel_name} tvg-logo=\"https://live.fanmingming.com/tv/{channel_name}.png\" group-title=\"其它频道\",{channel_name}\n")
                 file.write(f"{channel_url}\n")
                 channel_counters[channel_name] = 1
     file.write(f"#EXTINF:-1 tvg-name=\"\" tvg-logo=\"\" group-title=\"{now}\",Auto-update\n")
