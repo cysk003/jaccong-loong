@@ -320,15 +320,15 @@ def channel_key(channel_name):
 
 # 对频道进行排序
 #print(results)
-#results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
-#results.sort(key=lambda x: channel_key(x[0]))
+results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
+results.sort(key=lambda x: channel_key(x[0]))
 
 
 result_counter = 8  # 每个频道需要的个数
 
 with open("test.txt", 'w', encoding='utf-8') as file:
     channel_counters = {}
-    results.sort()
+    #results.sort()
     file.write('广东频道,#genre#\n')
     file.write('纬来体育,http://hls.szsummer.cn/live/446035/playlist.m3u8?k=32f9ec7c13e4b390289143a8e1b2a898&t=1840341130\n')
     file.write('TVBPlus,https://ha.jmied.com/aa/aa.flv?auth_key=1661958232-0-0-3d9174957759709f8b53448167c0b6f6\n')
@@ -345,8 +345,8 @@ with open("test.txt", 'w', encoding='utf-8') as file:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
     channel_counters = {}
-    results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
-    results.sort(key=lambda x: channel_key(x[0]))
+    #results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
+    #results.sort(key=lambda x: channel_key(x[0]))
     file.write('央视频道,#genre#\n')
     for result in results:
         channel_name, channel_url, speed = result
@@ -376,7 +376,7 @@ with open("test.txt", 'w', encoding='utf-8') as file:
     file.write(f'{now},#genre#\n')
     file.write("Auto-update,http:// \n")
 with open("test.m3u", 'w', encoding='utf-8') as file:
-    results.sort()
+    #results.sort()
     channel_counters = {}
     file.write('#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml"\n')
     for result in results:
