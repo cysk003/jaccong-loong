@@ -159,8 +159,8 @@ for url in urls:
                             name = name.replace("珠江台", "广东珠江")
                             name = name.replace("cctv", "CCTV")
                             name = name.replace("中央", "CCTV")
-                            name = name.replace("央视台球", "CCTV央视台球频道")
-                            name = name.replace("央视文化精品", "CCTV文化精品")
+                            name = name.replace("央视台球", "央视台球频道")
+                            name = name.replace("央视文化", "央视文化精品")
                             name = name.replace("央视", "CCTV")
                             name = name.replace("CCTVCCTV", "CCTV")
                             name = name.replace("高清", "")
@@ -222,6 +222,7 @@ for url in urls:
                             name = name.replace("康巴卫视", "")
                             name = name.replace("安多卫视", "")
                             name = name.replace("文华", "文化")
+                            
                     
                             results.append(f"{name},{urld}")
                             
