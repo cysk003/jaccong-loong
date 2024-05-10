@@ -234,7 +234,10 @@ for url in urls:
                             name = name.replace("康巴卫视", "")
                             name = name.replace("安多卫视", "")
                             name = name.replace("文华", "文化")
-                            name = name.replace("翡翠台", "TVB翡翠台")                           
+                            name = name.replace("翡翠台", "TVB翡翠台")  
+                            name = name.replace("回放", "") 
+                            name = name.replace("编码", "") 
+                            name = name.replace("旅游卫视", "旅游") 
                     
                             results.append(f"{name},{urld}")
                             
