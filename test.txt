@@ -193,7 +193,7 @@ CCTV13,http://59.32.97.63:9901/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&dow
 CCTV13,http://183.239.226.235:9901/tsfile/live/0013_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV13,http://123.182.211.73:8088/tsfile/live/0013_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV13,http://119.125.129.240:9901/tsfile/live/1033_1.m3u8?key=txiptv&playlive=1&down=1
-CCTV13回放,http://116.11.157.30:1188/tsfile/live/1046_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV13,http://116.11.157.30:1188/tsfile/live/1046_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV14,http://116.11.157.30:1188/tsfile/live/0014_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV14,http://171.108.239.76:8181/tsfile/live/1040_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV14,http://171.108.239.82:8181/tsfile/live/0014_1.m3u8?key=txiptv&playlive=1&authid=0
@@ -380,7 +380,7 @@ CCTV风云音乐,http://183.239.226.235:9901/tsfile/live/1047_1.m3u8?key=txiptv&
 广西卫视,http://171.108.239.73:8181/tsfile/live/1058_1.m3u8?key=txiptv&playlive=1&authid=0
 广西卫视,http://183.239.226.235:9901/tsfile/live/0113_1.m3u8?key=txiptv&playlive=1&authid=0
 广西卫视,http://222.83.153.79:8181/tsfile/live/2037_1.m3u8?key=txiptv&playlive=1&authid=0
-广西卫视编码,http://116.11.157.30:1188/tsfile/live/0113_1.m3u8?key=txiptv&playlive=1&authid=0
+广西卫视,http://116.11.157.30:1188/tsfile/live/0113_1.m3u8?key=txiptv&playlive=1&authid=0
 延边卫视,http://116.11.157.30:1188/tsfile/live/1087_1.m3u8?key=txiptv&playlive=1&authid=0
 新疆卫视,http://171.108.239.76:8181/tsfile/live/1073_1.m3u8?key=txiptv&playlive=0&authid=0
 新疆卫视,http://171.108.239.50:8181/tsfile/live/0110_1.m3u8?key=txiptv&playlive=1&authid=0
