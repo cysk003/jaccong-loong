@@ -37,9 +37,7 @@ proxies: null
 # 远程订阅
 proxy-providers:
   Subscribe: {!!merge <<: *p, path: ./proxy_providers/subscribe.yaml, url: "https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=fefdebcf9a81e4bf72a74c86e98c2ca2", benchmark-timeout: 5, benchmark-url: 'http://www.apple.com/library/test/success.html', interval: 86400}
-  https://sub.tgzdyz2.xyz/sub:
-    interval: 86400
-    url: https://sub.tgzdyz2.xyz/sub
+  
 # 1. 请使用Clash类型订阅链接填入引号""内使用,
 # 2. 或可使用通用订阅链接通过Sub-Store进行订阅转换(用于Stash)。
 
