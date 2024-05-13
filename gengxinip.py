@@ -130,23 +130,7 @@ def findtheone(unique_ips_ports):
 
 
 # 提取唯一的IP地址和端口号
-unique_ips_ports = extract_unique_ip_ports(fofa_url)
-print(unique_ips_ports)
-unique_ips_ports_fs = extract_unique_ip_ports(fofa_url_fs)
-print(unique_ips_ports_fs)
-unique_ips_ports_jm = extract_unique_ip_ports(fofa_url_jm)
-print(unique_ips_ports_jm)
-unique_ips_ports_mz = extract_unique_ip_ports(fofa_url_mz)
-print(unique_ips_ports_mz)
 
-valid_ip = findtheone(unique_ips_ports)
-print(valid_ip)
-valid_ip_fs = findtheone(unique_ips_ports_fs)
-print(valid_ip_fs)
-valid_ip_jm = findtheone(unique_ips_ports_jm)
-print(valid_ip_jm)
-valid_ip_mz = findtheone(unique_ips_ports_mz)
-print(valid_ip_mz)
 # 定义需要更新的文件列表
 files_to_update = [
     {'url': 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/jaccong/loong/main/9.txt', 'filename': '9.txt'}
@@ -165,8 +149,37 @@ ip_port_repl_mz = valid_ip_mz
 # 更新文件中的IP地址和端口号
 updated_content = ''
 updated_content_3 = ''
-update_files(valid_ip,ip_port_pattern,ip_port_repl)
-update_files(valid_ip_fs,ip_port_pattern_fs,ip_port_repl_fs)
-update_files(valid_ip_jm,ip_port_pattern_jm,ip_port_repl_jm)
-update_files(valid_ip_mz,ip_port_pattern_mz,ip_port_repl_mz)
+try:
+    unique_ips_ports = extract_unique_ip_ports(fofa_url)
+    print(unique_ips_ports)
+    valid_ip = findtheone(unique_ips_ports)
+    print(valid_ip)
+    update_files(valid_ip,ip_port_pattern,ip_port_repl)
+except requests.RequestException as e:
+    print(f"错误: {e}")
+try:
+    unique_ips_ports_fs = extract_unique_ip_ports(fofa_url_fs)
+    print(unique_ips_ports_fs)
+    valid_ip_fs = findtheone(unique_ips_ports_fs)
+    print(valid_ip_fs)
+    update_files(valid_ip_fs,ip_port_pattern_fs,ip_port_repl_fs)
+except requests.RequestException as e:
+    print(f"错误: {e}")
+try:
+    unique_ips_ports_jm = extract_unique_ip_ports(fofa_url_jm)
+    print(unique_ips_ports_jm)
+    valid_ip_jm = findtheone(unique_ips_ports_jm)
+    print(valid_ip_jm)
+    update_files(valid_ip_jm,ip_port_pattern_jm,ip_port_repl_jm)
+except requests.RequestException as e:
+    print(f"错误: {e}")
+try:
+    unique_ips_ports_mz = extract_unique_ip_ports(fofa_url_mz)
+    print(unique_ips_ports_mz)
+    valid_ip_mz = findtheone(unique_ips_ports_mz)
+    print(valid_ip_mz)
+    update_files(valid_ip_mz,ip_port_pattern_mz,ip_port_repl_mz)
+except requests.RequestException as e:
+    print(f"错误: {e}")
+
 
