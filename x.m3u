@@ -32,8 +32,7 @@ http://120.196.171.138:9901/tsfile/live/1102_1.m3u8?key=txiptv&playlive=1&down=1
 #EXTINF:-1 tvg-name="澳视澳门" tvg-logo="https://live.fanmingming.com/tv/澳视澳门.png" group-title="港澳频道",澳视澳门
 http://120.196.171.138:9901/tsfile/live/1106_1.m3u8?key=txiptv&playlive=1&down=1
 
-#EXTINF:-1 tvg-name="星河台" tvg-logo="https://live.fanmingming.com/tv/TVB星河.png" group-title="港澳频道",TVB星河
-http://v2h.jdshipin.com/xinghe/xinghe.stream/chunklist.m3u8
+
 #EXTINF:-1 tvg-name="TVBPlus" tvg-logo="https://yang-1989.eu.org/logo/TVBPlus.png" group-title="港澳频道",TVBPlus
 https://ha.jmied.com/aa/aa.flv?auth_key=1661958232-0-0-3d9174957759709f8b53448167c0b6f6
 #EXTINF:-1 tvg-name="纬来体育" tvg-logo="https://yang-1989.eu.org/logo/纬来体育.png" group-title="港澳频道",纬来体育
