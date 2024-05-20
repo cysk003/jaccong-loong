@@ -2,6 +2,9 @@ import requests
 import re
 import cv2  # 导入OpenCV库
 import datetime
+with open('9.txt', 'r', encoding='utf-8') as file: 
+    
+    print(file.read())
 #取时间
 now = (datetime.datetime.now() + datetime.timedelta(hours=8)).strftime('[%m/%d %H:%M]Updated.')
 # 定义组播地址和端口 
