@@ -1,0 +1,42 @@
+name: genngxinzubo
+on:
+   #push:
+     #paths:
+      #- 'gengxinip.py'
+   #schedule:
+        #- cron: '0 */6 * * *'
+   workflow_dispatch:
+ 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Delete workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 2
+          keep_minimum_runs: 6 
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - name: Install dependencies
+        run: pip install opencv-python requests 
+      - name: Run gengxinip
+        run: python ${{ github.workspace }}/gengxinip.py
+     
+      - name: Commit results
+        run: |
+          git config --local user.email "jaccong@163.com"
+          git config --local user.name "jaccong"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add *.txt *.m3u
+            git commit -m "Automatic update"
+            git push
+          else
+            echo "No changes detected, skipping commit."
+          fi
