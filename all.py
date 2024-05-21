@@ -3,8 +3,13 @@ import requests
 try:
   x = requests.get('https://fanmingming.com/txt?url=https://raw.githubusercontent.com/jaccong/loong/main/x.m3u',timeout=5).text
 except Exception as e:
-    print(f'error:【{e}】')
-
+    print(f'x-error:【{e}】')
+  
+try:
+  fmm = requests.get('https://fanmingming.com/txt?url=https://live.fanmingming.com/tv/m3u/ipv6.m3u',timeout=5).text
+except Exception as e:
+    print(f'fmm-error:【{e}】')
+  
 with open('litv.txt', 'r', encoding='utf-8') as file:
   litv = file.read()
 
