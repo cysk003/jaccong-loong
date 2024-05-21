@@ -1,4 +1,4 @@
-[酒店]广东频道,#genre#
+[通用]广东频道,#genre#
 广东珠江,http://120.238.85.131:9901/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&down=1
 广东体育,http://120.238.85.131:9901/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&down=1
 大湾区卫视,http://120.238.85.131:9901/tsfile/live/1016_1.m3u8?key=txiptv&playlive=1&down=1
@@ -18,7 +18,7 @@
 嘉佳卡通,http://120.196.171.138:9901/tsfile/live/1098_1.m3u8?key=txiptv&playlive=1&down=1
 广东少儿,http://120.196.171.138:9901/tsfile/live/1097_1.m3u8?key=txiptv&playlive=1&down=1
 
-[酒店]港澳频道,#genre#
+[通用]港澳频道,#genre#
 翡翠台,http://120.196.171.138:9901/tsfile/live/1076_1.m3u8?key=txiptv&playlive=1&down=1
 TVB星河,http://120.196.171.138:9901/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&down=1
 明珠台,http://120.196.171.138:9901/tsfile/live/1009_1.m3u8?key=txiptv&playlive=1&down=1
@@ -30,7 +30,7 @@ TVBPlus,https://ha.jmied.com/aa/aa.flv?auth_key=1661958232-0-0-3d9174957759709f8
 凤凰资讯,http://43.141.130.51/1.v.smtcdns.net/qctv.fengshows.cn/live/0701phk72.flv
 凤凰香港,http://43.141.130.51/1.v.smtcdns.net/qctv.fengshows.cn/live/0701pin72.flv
 
-[酒店]央视频道,#genre#
+[通用]央视频道,#genre#
 CHC家庭影院,http://120.196.171.138:9901/tsfile/live/1007_1.m3u8?key=txiptv&playlive=1&down=1
 CHC动作电影,http://120.196.171.138:9901/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&down=1
 CHC影迷电影,http://120.196.171.138:9901/tsfile/live/1008_1.m3u8?key=txiptv&playlive=1&down=1
@@ -57,7 +57,7 @@ CCTV17,http://120.196.171.138:9901/tsfile/live/1028_1.m3u8?key=txiptv&playlive=1
 央视台球,http://120.196.171.138:9901/tsfile/live/1072_1.m3u8?key=txiptv&playlive=1&down=1
 风云剧场,http://120.196.171.138:9901/tsfile/live/1070_1.m3u8?key=txiptv&playlive=1&down=1
 
-[酒店]卫视频道,#genre#
+[通用]卫视频道,#genre#
 浙江卫视,http://120.196.171.138:9901/tsfile/live/1043_1.m3u8?key=txiptv&playlive=1&down=1
 东方卫视,http://120.196.171.138:9901/tsfile/live/1047_1.m3u8?key=txiptv&playlive=1&down=1
 江苏卫视,http://120.196.171.138:9901/tsfile/live/1044_1.m3u8?key=txiptv&playlive=1&down=1
@@ -332,4 +332,13 @@ GLOBETROTTER,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv016
 GinxTV,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv053
 
 
+
+"[备用]香港频道",#genre#
+翡翠台,http://php.jdshipin.com:8880/TVOD/iptv.php?id=fct3
+华丽翡翠台,http://php.jdshipin.com:8880/TVOD/iptv.php?id=huali
+明珠台,http://php.jdshipin.com:8880/TVOD/iptv.php?id=mzt
+TVB Plus,http://php.jdshipin.com:8880/TVOD/iptv.php?id=tvbp
+VIUTV,http://php.jdshipin.com:8880/TVOD/iptv.php?id=viutv
+RTHK31,http://php.jdshipin.com:8880/TVOD/iptv.php?id=rthk31
+RTHK32,http://php.jdshipin.com:8880/TVOD/iptv.php?id=rthk32
 
