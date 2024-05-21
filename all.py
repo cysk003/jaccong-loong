@@ -1,7 +1,7 @@
 import requests
 
 try:
-  x = requests.get('https://raw.githubusercontent.com/jaccong/loong/main/x.m3u',timeout=1).text
+  x = requests.get('https://fanmingming.com/txt?url=https://raw.githubusercontent.com/jaccong/loong/main/x.m3u',timeout=1).text
 except Exception as e:
     print(f'error:【{e}】')
 
