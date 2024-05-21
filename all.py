@@ -1,5 +1,5 @@
 import requests
-
+import re
 try:
   x = requests.get('https://fanmingming.com/txt?url=https://raw.githubusercontent.com/jaccong/loong/main/x.m3u',timeout=5).text
 except Exception as e:
