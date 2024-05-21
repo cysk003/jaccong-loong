@@ -1,0 +1,8 @@
+"[备用]香港频道",#genre#
+翡翠台,http://php.jdshipin.com:8880/TVOD/iptv.php?id=fct3
+华丽翡翠台,http://php.jdshipin.com:8880/TVOD/iptv.php?id=huali
+明珠台,http://php.jdshipin.com:8880/TVOD/iptv.php?id=mzt
+TVB Plus,http://php.jdshipin.com:8880/TVOD/iptv.php?id=tvbp
+VIUTV,http://php.jdshipin.com:8880/TVOD/iptv.php?id=viutv
+RTHK31,http://php.jdshipin.com:8880/TVOD/iptv.php?id=rthk31
+RTHK32,http://php.jdshipin.com:8880/TVOD/iptv.php?id=rthk32
