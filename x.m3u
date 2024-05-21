@@ -181,8 +181,4 @@ http://120.196.171.138:9901/tsfile/live/1041_1.m3u8?key=txiptv&playlive=1&down=1
 #EXTINF:-1 tvg-name="三沙卫视" tvg-logo="https://live.fanmingming.com/tv/三沙卫视.png" group-title="卫视频道",三沙卫视
 http://120.196.171.138:9901/tsfile/live/1040_1.m3u8?key=txiptv&playlive=1&down=1
 
-#EXTINF:-1 tvg-name="广东珠江" tvg-logo="https://live.fanmingming.com/tv/广东珠江.png" group-title="备用频道",广东珠江
-https://tv.iill.top/Live/gdzj
-#EXTINF:-1 tvg-name="广东体育" tvg-logo="https://live.fanmingming.com/tv/广东体育.png" group-title="备用频道",广东体育
-https://tv.iill.top/Live/gdty
 
