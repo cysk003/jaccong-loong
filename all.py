@@ -16,8 +16,10 @@ except Exception as e:
   
 with open('litv.txt', 'r', encoding='utf-8') as file:
   litv = file.read()
-
+with open('hk.txt', 'r', encoding='utf-8') as file:
+  hk = file.read()
 with open("all.txt", 'w', encoding='utf-8') as file:
   file.write(f'{x}\n')
   file.write(f'{fmm}\n')
   file.write(f'{litv}\n')
+  file.write(f'{hk}\n')
