@@ -5,9 +5,9 @@ try:
 except Exception as e:
     print(f'error:【{e}】')
 
-with open('lity.txt', 'r', encoding='utf-8') as file:
-  lity = file.read()
+with open('litv.txt', 'r', encoding='utf-8') as file:
+  litv = file.read()
 
 with open("all.txt", 'w', encoding='utf-8') as file:
   file.write(f'{x}\n')
-  file.write(f'{lity}\n')
+  file.write(f'{litv}\n')
