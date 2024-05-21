@@ -11,6 +11,7 @@ try:
   fmm = re.sub('央视频道','[IPV6]央视频道',fmm)
   fmm = re.sub('卫视频道','[IPV6]卫视频道',fmm)
   fmm  =re.sub('数字频道','[IPV6]数字频道',fmm)
+  print(fmm)
 except Exception as e:
     print(f'fmm-error:【{e}】')
   
