@@ -131,7 +131,7 @@ def get_mytvsuper(channel):
 # 创建或打开文件用于写入
 with open('mytvfree.m3u', 'w', encoding='utf-8') as m3u_file:
     # 写入 M3U 文件的头部
-    m3u_file.write("#EXTM3U url-tvg=\"https://xmltv.bph.workers.dev\"\n")
+    m3u_file.write("#EXTM3U\n")
 
     # 遍历所有频道并写入每个频道的 M3U 内容
     for channel_code in CHANNEL_LIST.keys():
