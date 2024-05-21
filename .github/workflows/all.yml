@@ -22,8 +22,10 @@ jobs:
       - name: Install dependencies
         run: pip install opencv-python requests 
         
-      - name: Run all
-        run: python ${{ github.workspace }}/all.py
+      ##- name: Run all
+       ## run: python ${{ github.workspace }}/all.py
+      - name: Run mytv
+        run: python ${{ github.workspace }}/mytvsp.py
      
       - name: Commit results
         run: |
