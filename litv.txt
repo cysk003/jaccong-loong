@@ -1,4 +1,4 @@
-新闻频道,#genre#
+[台湾]新闻频道,#genre#
 
 TVBS HD,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv073
 TVBS新闻台,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv072
@@ -24,7 +24,7 @@ TVBS新闻台,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv072
 华视,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv041
 民视台湾台,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv156
 
-影视频道,#genre#
+[台湾]影视频道,#genre#
 影迷數位電影台,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv011
 AMC电影台,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv017
 CATCHPLAY电影台,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv076
@@ -40,7 +40,7 @@ CATCHPLAY电影台,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv076
 公视戏剧,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv042
 龙华戏剧,http://debian.52sw.top:678/play/mt/litv.php?id=litv-longturn18
 
-体育频道,#genre#
+[台湾]体育频道,#genre#
 智林体育台,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv101
 时尚运动X,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv014
 靖天育乐台,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv062
@@ -54,7 +54,7 @@ CATCHPLAY电影台,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv076
 博斯无限2,http://debian.52sw.top:678/play/mt/litv.php?id=litv-longturn13
 TRACE SPORTS STARS,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv077
 
-综艺频道,#genre#
+[台湾]综艺频道,#genre#
 視納華仁紀實頻道,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv013
 中视菁采,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv064
 八大精彩台,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv034
@@ -83,7 +83,7 @@ TVBS欢乐台,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv068
 猪哥亮歌厅秀,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv006
 
 
-其他频道,#genre#
+[台湾]其他频道,#genre#
 Smart知识台,http://debian.52sw.top:678/play/mt/litv.php?id=litv-longturn19
 达文西频道,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv018
 阿里郎,http://debian.52sw.top:678/play/mt/litv.php?id=4gtv-4gtv079
