@@ -81,7 +81,7 @@ def get_mytvsuper(channel):
         return '频道代号错误'
 
     api_token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJib3NzX2lkIjoiNzgzNzU0NDY5IiwiZGV2aWNlX3Rva2VuIjoickFwTEM0a1lLS1JRRUFEOUVleWZoaW9BIiwiZGV2aWNlX2lkIjoiTmpNMk9XWTVaRGt0WkdReVpDMDBObUUyTFdJMlpHWXROemxqWVRRNU1ETXlaalZpIiwiZGV2aWNlX3R5cGUiOiJ3ZWIiLCJkZXZpY2Vfb3MiOiJicm93c2VyIiwiZHJtX2lkIjoiTmpNMk9XWTVaRGt0WkdReVpDMDBObUUyTFdJMlpHWXROemxqWVRRNU1ETXlaalZpIiwiZXh0cmEiOnsicHJvZmlsZV9pZCI6MX0sImlhdCI6MTcxNjMxMzAxOSwiZXhwIjoxNzE2MzE2NjE5fQ.RwVLpXIDI-d3JvUM6fGIMPpVNhc8c-5MI-53o2NMLvWTCfSdJTAu0q0Nbxaukg6tVqQO9URfBiQ85Zied6mox6PtS1Wes3tOd1CIm2zqeZXGB97PeFAHoORl-jRiZY-3d4O1-GGGZpc90VeNRp_AsGJvTW5dv7bwlZ-nwtwZ6m_ta24vYNS4OGf1P2fGBIyMw1-eNy-fnPdc4HVskJ8_9EpVBodolrdLj-gIWwN-dwDGSLyi2-HG339qC5NYOUAuWPNmpP8hThMJEmdKrnnYJwMhXhDYiYWFTHr9DKH5TjeBtp0nQ1xVF2Cv_jDd644G8qguwiMa-7CoMjt6G3b18_7EQ-7O38kwLN67xQ15u50XVyVqCKs1Q5GSPmELc8Xx1pHvzWY2dFxSHrOZsuxSduj2laLjXoEycg3Nj-Xhrq-RqTsgIbo7mZ637eWd-xfxm1yRjYalplwE8Ta-w6MiNKB4hnFJ193ZrJOQFSIN3HirtAbgH9DUyV8pOjrtBG3vLoh2V03Ng6K_uRwrkuQGDKSmn4UrZcBgSjeqfuFlGJUTfyGkTWiNmg6UARssskjOtxX5ZCe_gk5QM1UsgqLbhuTU5mAYhSC2y4yv_A7J5aEIgiKtyZsgKvPsOofYNGwZmyhT0wQJjqjqXbkDf90G4YxLC6Iy7x5940wQCtvWOy8"
-       headers = {
+    headers = {
         'Accept': 'application/json',
         'Authorization': 'Bearer ' + api_token,
         'Accept-Language': 'zh-CN,zh-Hans;q=0.9',
